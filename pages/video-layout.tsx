@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable react/button-has-type */
 import React, { MouseEventHandler, useMemo, useRef, useState } from 'react';
 import styled from 'styled-components';
@@ -96,15 +97,34 @@ export default function VideoLayout({ objects }: VideoLayoutProps) {
   const resizerRef = useRef(null);
   const startPosition = useRef<number | null>(null);
 
-  const objectsWithStagedFlag = useMemo(
-    () =>
-      // Add isStaged property to each object
-      remoteStreams.map((obj: any) => ({
-        ...obj,
-        isStaged: false,
-      })),
-    [remoteStreams]
-  );
+  // const objectsWithStagedFlag = useMemo(
+  //   () =>
+  //     // Add isStaged property to each object
+  //     remoteStreams.map((obj: any) => ({
+  //       ...obj,
+  //       isStaged: false,
+  //     })),
+  //   [remoteStreams]
+  // );
+
+  const objectsWithStagedFlag = useMemo(() => {
+    // Add isStaged property to each object and sort the array based on the specified conditions
+    const talkingObjs = objects.filter((obj: any) => obj.isTalking);
+    const videoOnObjs = objects.filter((obj: any) => obj.isVideoOn && !obj.isTalking);
+    const muteObjs = objects.filter((obj: any) => obj.isMute && !obj.isTalking && !obj.isVideoOn);
+    const otherObjs = objects.filter((obj: any) => !obj.isTalking && !obj.isVideoOn && !obj.isMute);
+
+    const objectsWithStagedFlag = [
+      ...talkingObjs,
+      ...videoOnObjs.slice(0 - talkingObjs.length),
+      ...muteObjs.slice(0 - talkingObjs.length - videoOnObjs.length),
+      ...otherObjs.slice(0 - talkingObjs.length - videoOnObjs.length - muteObjs.length),
+    ].map((obj) => ({
+      ...obj,
+    }));
+
+    return objectsWithStagedFlag;
+  }, [remoteStreams]);
 
   const [stagedObjects, unstagedObjects] = useMemo(() => {
     const stagedObjectsTemp = objectsWithStagedFlag.filter((obj: any) => obj.isStaged);
