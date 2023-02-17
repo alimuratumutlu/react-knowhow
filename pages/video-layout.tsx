@@ -21,11 +21,21 @@ interface Props {
 }
 
 export default function VideoLayout({ objects }: Props) {
+  const objectsWithStagedFlag = useMemo(
+    () =>
+      // Add isStaged property to each object
+      objects.map((obj: any) => ({
+        ...obj,
+        isStaged: false,
+      })),
+    [objects]
+  );
+
   const [stagedObjects, unstagedObjects] = useMemo(() => {
-    const stagedObjectsTemp = objects.filter((obj: any) => obj.isStaged);
-    const unstagedObjectsTemp = objects.filter((obj: any) => !obj.isStaged);
+    const stagedObjectsTemp = objectsWithStagedFlag.filter((obj: any) => obj.isStaged);
+    const unstagedObjectsTemp = objectsWithStagedFlag.filter((obj: any) => !obj.isStaged);
     return [stagedObjectsTemp, unstagedObjectsTemp];
-  }, [objects]);
+  }, [objectsWithStagedFlag]);
 
   return (
     <div>
