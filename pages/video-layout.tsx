@@ -1,12 +1,18 @@
-import React, { useMemo } from 'react';
+/* eslint-disable react/button-has-type */
+import React, { useMemo, useState } from 'react';
 import styled from 'styled-components';
 
-const Container = styled.div`
+interface ContainerProps {
+  isHorizontal: boolean;
+}
+
+const Container = styled.div<ContainerProps>`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin: 20px;
+  ${({ isHorizontal }) => (isHorizontal ? 'flex-direction: row' : 'flex-direction: column')};
 `;
 
 const Square = styled.div`
@@ -21,6 +27,8 @@ interface Props {
 }
 
 export default function VideoLayout({ objects }: Props) {
+  const [isHorizontal, setIsHorizontal] = useState(true);
+
   const objectsWithStagedFlag = useMemo(
     () =>
       // Add isStaged property to each object
@@ -37,17 +45,25 @@ export default function VideoLayout({ objects }: Props) {
     return [stagedObjectsTemp, unstagedObjectsTemp];
   }, [objectsWithStagedFlag]);
 
+  const handleLayoutSwitch = () => {
+    setIsHorizontal((prev) => !prev);
+  };
+
   return (
     <div>
+      <button onClick={handleLayoutSwitch}>
+        Switch to {isHorizontal ? 'vertical' : 'horizontal'} layout
+      </button>
+
       <h2>Staged Objects</h2>
-      <Container>
+      <Container isHorizontal={isHorizontal}>
         {stagedObjects.map((obj: any, index: React.Key | null | undefined) => (
           <Square key={index} />
         ))}
       </Container>
 
       <h2>Unstaged Objects</h2>
-      <Container>
+      <Container isHorizontal={isHorizontal}>
         {unstagedObjects.map((obj: any, index: React.Key | null | undefined) => (
           <Square key={index} />
         ))}
