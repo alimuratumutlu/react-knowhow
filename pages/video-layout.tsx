@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -21,8 +21,11 @@ interface Props {
 }
 
 export default function VideoLayout({ objects }: Props) {
-  const stagedObjects = objects.filter((obj: { isStaged: any }) => obj.isStaged);
-  const unstagedObjects = objects.filter((obj: { isStaged: any }) => !obj.isStaged);
+  const [stagedObjects, unstagedObjects] = useMemo(() => {
+    const stagedObjects = objects.filter((obj: any) => obj.isStaged);
+    const unstagedObjects = objects.filter((obj: any) => !obj.isStaged);
+    return [stagedObjects, unstagedObjects];
+  }, [objects]);
 
   return (
     <div>
@@ -39,6 +42,6 @@ export default function VideoLayout({ objects }: Props) {
           <Square key={index} />
         ))}
       </Container>
-    </div>bn
+    </div>
   );
 }
