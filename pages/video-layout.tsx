@@ -22,9 +22,9 @@ interface Props {
 
 export default function VideoLayout({ objects }: Props) {
   const [stagedObjects, unstagedObjects] = useMemo(() => {
-    const stagedObjects = objects.filter((obj: any) => obj.isStaged);
-    const unstagedObjects = objects.filter((obj: any) => !obj.isStaged);
-    return [stagedObjects, unstagedObjects];
+    const stagedObjectsTemp = objects.filter((obj: any) => obj.isStaged);
+    const unstagedObjectsTemp = objects.filter((obj: any) => !obj.isStaged);
+    return [stagedObjectsTemp, unstagedObjectsTemp];
   }, [objects]);
 
   return (
