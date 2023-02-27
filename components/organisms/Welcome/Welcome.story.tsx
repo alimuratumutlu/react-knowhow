@@ -1,4 +1,4 @@
-import { Welcome } from './Welcome';
+import { Welcome } from './Welcome.component';
 
 export default {
   title: 'Welcome',

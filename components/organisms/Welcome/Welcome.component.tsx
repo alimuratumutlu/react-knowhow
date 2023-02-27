@@ -1,6 +1,9 @@
 import { Text, Anchor, Grid, Container } from '@mantine/core';
 import PageTitle from '../../atoms/PageTitle/PageTitle.component';
+import { ImageCard } from '../../molecules/ImageCard/ImageCard.component';
 import { StatsRingCard } from '../../molecules/StatsRingCard/StatsRingCard.component';
+
+import useStyles from './Welcome.styles';
 
 const mockdata = {
   title: 'Murat Umutlu (MuuM)',
@@ -28,6 +31,8 @@ const statMocData = {
 };
 
 export function Welcome() {
+  const { classes } = useStyles();
+
   const { title, text } = mockdata;
   const { title: statTitle, completed, total, stats } = statMocData;
 
@@ -38,9 +43,49 @@ export function Welcome() {
           <PageTitle text={title} />
         </Grid.Col>
         <Grid.Col xs={12}>
-          <Text color="dimmed" align="justify" size="lg" mx="auto" mt="xl">
+          <Text color="dimmed" align="justify" size="lg" className={classes.description}>
             {text}
           </Text>
+        </Grid.Col>
+        <Grid.Col xs={3}>
+          <ImageCard
+            image="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            link="https://mantine.dev/"
+            title="Journey to Swiss"
+            author="Robert Gluesticker"
+            views={7847}
+            comments={5}
+          />
+        </Grid.Col>
+        <Grid.Col xs={3}>
+          <ImageCard
+            image="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            link="https://mantine.dev/"
+            title="Journey to Swiss"
+            author="Robert Gluesticker"
+            views={7847}
+            comments={5}
+          />
+        </Grid.Col>
+        <Grid.Col xs={3}>
+          <ImageCard
+            image="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            link="https://mantine.dev/"
+            title="Journey to Swiss"
+            author="Robert Gluesticker"
+            views={7847}
+            comments={5}
+          />
+        </Grid.Col>
+        <Grid.Col xs={3}>
+          <ImageCard
+            image="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            link="https://mantine.dev/"
+            title="Journey to Swiss"
+            author="Robert Gluesticker"
+            views={7847}
+            comments={5}
+          />
         </Grid.Col>
         <Grid.Col xs={6}>
           <StatsRingCard title={statTitle} completed={completed} total={total} stats={stats} />

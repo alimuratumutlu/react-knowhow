@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { Welcome } from './Welcome';
+import { Welcome } from './Welcome.component';
 
 describe('Welcome component', () => {
   it('has correct Next.js theming section link', () => {
