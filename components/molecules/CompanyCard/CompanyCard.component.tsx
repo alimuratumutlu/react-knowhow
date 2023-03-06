@@ -1,18 +1,25 @@
-import { IconEye, IconMessageCircle } from '@tabler/icons';
+import { IconCalendarEvent } from '@tabler/icons';
 import { Card, Text, Group, Center } from '@mantine/core';
 
-import useStyles from './ImageCard.styles';
+import useStyles from './CompanyCard.styles';
 
-interface ImageCardProps {
+interface CompanyCardProps {
   link: string;
   image: string;
-  title: string;
-  author: string;
-  views: number;
-  comments: number;
+  company: string;
+  position: string;
+  from: number;
+  to: number | string;
 }
 
-export function ImageCard({ image, title, author, views, comments, link }: ImageCardProps) {
+export default function CompanyCard({
+  image,
+  company,
+  position,
+  from,
+  to,
+  link,
+}: CompanyCardProps) {
   const { classes, theme } = useStyles();
 
   return (
@@ -30,26 +37,26 @@ export function ImageCard({ image, title, author, views, comments, link }: Image
 
       <div className={classes.content}>
         <div>
-          <Text size="lg" className={classes.title} weight={500}>
-            {title}
+          <Text size="xl" className={classes.company} weight={500}>
+            {company}
           </Text>
 
           <Group position="apart" spacing="xs">
-            <Text size="sm" className={classes.author}>
-              {author}
+            <Text size="sm" className={classes.position}>
+              {position}
             </Text>
 
             <Group spacing="lg">
               <Center>
-                <IconEye size={16} stroke={1.5} color={theme.colors.dark[2]} />
+                <IconCalendarEvent size={16} stroke={1.5} color={theme.colors.dark[2]} />
                 <Text size="sm" className={classes.bodyText}>
-                  {views}
+                  {from}
                 </Text>
               </Center>
               <Center>
-                <IconMessageCircle size={16} stroke={1.5} color={theme.colors.dark[2]} />
+                <IconCalendarEvent size={16} stroke={1.5} color={theme.colors.dark[2]} />
                 <Text size="sm" className={classes.bodyText}>
-                  {comments}
+                  {to}
                 </Text>
               </Center>
             </Group>

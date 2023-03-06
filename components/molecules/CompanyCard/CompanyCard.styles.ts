@@ -43,9 +43,10 @@ export default createStyles((theme, _params, getRef) => {
       zIndex: 1,
     },
 
-    title: {
+    company: {
       color: theme.white,
       marginBottom: 5,
+      fontWeight: 700,
     },
 
     bodyText: {
@@ -53,8 +54,8 @@ export default createStyles((theme, _params, getRef) => {
       marginLeft: 7,
     },
 
-    author: {
-      color: theme.colors.dark[2],
+    position: {
+      color: theme.white,
     },
   };
 });
