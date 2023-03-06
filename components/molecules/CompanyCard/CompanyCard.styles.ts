@@ -6,9 +6,8 @@ export default createStyles((theme, _params, getRef) => {
   return {
     card: {
       position: 'relative',
-      height: 280,
+      height: 300,
       backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-
       [`&:hover .${image}`]: {
         transform: 'scale(1.03)',
       },

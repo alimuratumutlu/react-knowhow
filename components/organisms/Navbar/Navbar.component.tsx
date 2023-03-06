@@ -8,7 +8,7 @@ import {
   IconLink,
 } from '@tabler/icons';
 import { UserButton } from '../../molecules/UserButton/UserButton.component';
-import { LinksGroup } from '../../molecules/NavbarLinksGroup/NavbarLinksGroup.component';
+import { LinksGroup } from '../../molecules/LinksGroup/LinksGroup.component';
 import { ColorSchemeToggle } from '../../molecules/ColorSchemeToggle/ColorSchemeToggle';
 
 import useStyles from './Navbar.styles';
@@ -238,17 +238,41 @@ const mockdata = [
       { label: 'Scrum', link: '/development-methodologies/scrum' },
       { label: 'Extreme Programming (XP)', link: '/development-methodologies/extreme-programming' },
       { label: 'Kanban', link: '/development-methodologies/kanban' },
-      { label: 'Feature Driven Development (FDD)', link: '/development-methodologies/feature-driven-development' },
+      {
+        label: 'Feature Driven Development (FDD)',
+        link: '/development-methodologies/feature-driven-development',
+      },
       { label: 'Crystal Clear', link: '/development-methodologies/crystal-clear' },
       { label: 'Lean Development', link: '/development-methodologies/lean-development' },
-      { label: 'Dynamic Systems Development Method (DSDM)', link: '/development-methodologies/dynamic-systems-development-method' },
-      { label: 'Rapid Application Development (RAD)', link: '/development-methodologies/rapid-application-development' },
+      {
+        label: 'Dynamic Systems Development Method (DSDM)',
+        link: '/development-methodologies/dynamic-systems-development-method',
+      },
+      {
+        label: 'Rapid Application Development (RAD)',
+        link: '/development-methodologies/rapid-application-development',
+      },
       { label: 'Spiral Model', link: '/development-methodologies/spiral-model' },
-      { label: 'Test Driven Development (TDD)', link: '/development-methodologies/test-driven-development' },
-      { label: 'Behavior Driven Development (BDD)', link: '/development-methodologies/behavior-driven-development' },
-      { label: 'Acceptance Test Driven Development (ATDD)', link: '/development-methodologies/acceptance-test-driven-development' },
-      { label: 'Domain Driven Design (DDD)', link: '/development-methodologies/domain-driven-design' },
-      { label: 'Continuous Integration/Continuous Delivery (CI/CD)', link: '/development-methodologies/continuous-integration-continuous-delivery' },
+      {
+        label: 'Test Driven Development (TDD)',
+        link: '/development-methodologies/test-driven-development',
+      },
+      {
+        label: 'Behavior Driven Development (BDD)',
+        link: '/development-methodologies/behavior-driven-development',
+      },
+      {
+        label: 'Acceptance Test Driven Development (ATDD)',
+        link: '/development-methodologies/acceptance-test-driven-development',
+      },
+      {
+        label: 'Domain Driven Design (DDD)',
+        link: '/development-methodologies/domain-driven-design',
+      },
+      {
+        label: 'Continuous Integration/Continuous Delivery (CI/CD)',
+        link: '/development-methodologies/continuous-integration-continuous-delivery',
+      },
     ],
   },
   {

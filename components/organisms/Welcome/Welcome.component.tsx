@@ -1,4 +1,4 @@
-import { Text, Anchor, Grid, Container } from '@mantine/core';
+import { Text, Grid, Container } from '@mantine/core';
 import PageTitle from '../../atoms/PageTitle/PageTitle.component';
 
 import useStyles from './Welcome.styles';

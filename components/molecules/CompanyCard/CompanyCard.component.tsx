@@ -3,7 +3,7 @@ import { Card, Text, Group, Center } from '@mantine/core';
 
 import useStyles from './CompanyCard.styles';
 
-interface CompanyCardProps {
+interface companyCardProps {
   link: string;
   image: string;
   company: string;
@@ -19,7 +19,7 @@ export default function CompanyCard({
   from,
   to,
   link,
-}: CompanyCardProps) {
+}: companyCardProps) {
   const { classes, theme } = useStyles();
 
   return (

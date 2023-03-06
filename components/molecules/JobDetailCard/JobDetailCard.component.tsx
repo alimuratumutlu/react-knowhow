@@ -3,7 +3,7 @@ import TechStackButton from '../TechStackButton/TechStackButton.component';
 
 import useStyles from './JobDetailCard.styles';
 
-interface JobDetailCardProps {
+interface jobDetailCardProps {
   methodologies: string[];
   responsibilities: string[];
   technologies: string[];
@@ -15,7 +15,7 @@ export default function JobDetailCard({
   responsibilities,
   technologies,
   description,
-}: JobDetailCardProps) {
+}: jobDetailCardProps) {
   const { classes } = useStyles();
   return (
     <Card withBorder radius="md" p={0} className={classes.card}>

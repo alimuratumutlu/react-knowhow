@@ -3,11 +3,11 @@ import { Title } from '@mantine/core';
 
 import useStyles from './PageTitle.styles';
 
-interface PageTitleProps {
+interface pageTitleProps {
   text: string;
 }
 
-export default function PageTitle({ text }: PageTitleProps) {
+export default function PageTitle({ text }: pageTitleProps) {
   const { classes } = useStyles();
 
   return (
