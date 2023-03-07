@@ -14,7 +14,7 @@ import { ColorSchemeToggle } from '../../molecules/ColorSchemeToggle/ColorScheme
 import useStyles from './Navbar.styles';
 
 const mockdata = [
-  { label: 'CV Resume', icon: IconGauge },
+  { label: 'CV Resume', icon: IconGauge, link: '/' },
   {
     label: 'Algorithms',
     icon: IconNotes,

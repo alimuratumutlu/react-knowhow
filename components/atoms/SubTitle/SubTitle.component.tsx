@@ -1,27 +1,23 @@
 import React from 'react';
 import { Title } from '@mantine/core';
 
-import useStyles from './PageTitle.styles';
-
-interface pageTitleProps {
-  text: string;
+interface subTitleProps {
+  children: React.ReactNode | React.ReactNode[] | string;
 }
 
-export default function PageTitle({ text }: pageTitleProps) {
-  const { classes } = useStyles();
-
+export default function SubTitle({ children }: subTitleProps) {
   return (
     <Title
       order={2}
-      size="h1"
+      size="h2"
       sx={(theme) => ({ fontFamily: `Greycliff CF, ${theme.fontFamily}` })}
       weight={900}
       align="left"
-      className={classes.title}
       pl="sm"
-      pr="sm"
+      mb="sm"
+      mt="lg"
     >
-      {text}
+      {children}
     </Title>
   );
 }

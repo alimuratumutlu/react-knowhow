@@ -9,17 +9,18 @@ interface linksGroupProps {
   icon: TablerIcon;
   label: string;
   initiallyOpened?: boolean;
+  link?: string;
   links?: { label: string; link: string }[];
 }
 
-export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: linksGroupProps) {
+export function LinksGroup({ icon: Icon, label, initiallyOpened, link, links }: linksGroupProps) {
   const { classes, theme } = useStyles();
   const hasLinks = Array.isArray(links);
   const [opened, setOpened] = useState(initiallyOpened || false);
   const ChevronIcon = theme.dir === 'ltr' ? IconChevronRight : IconChevronLeft;
-  const items = (hasLinks ? links : []).map((link, index) => (
-    <Link key={link.label + index} href={link.link} className={classes.link} passHref>
-      <Text>{link.label}</Text>
+  const items = (hasLinks ? links : []).map((item, index) => (
+    <Link key={item.label + index} href={item.link} className={classes.link} passHref>
+      <Text>{item.label}</Text>
     </Link>
   ));
 
@@ -31,7 +32,15 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: linksG
             <ThemeIcon variant="light" size={30}>
               <Icon size={18} />
             </ThemeIcon>
-            <Box ml="md">{label}</Box>
+            <Box ml="md">
+              {link ? (
+                <Link href={link} className={classes.singleLink} passHref>
+                  <Text>{label}</Text>
+                </Link>
+              ) : (
+                label
+              )}
+            </Box>
           </Box>
           {hasLinks && (
             <ChevronIcon

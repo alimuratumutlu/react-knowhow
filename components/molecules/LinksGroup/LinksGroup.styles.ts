@@ -15,6 +15,13 @@ export default createStyles((theme) => ({
     },
   },
 
+  singleLink: {
+    display: 'block',
+    textDecoration: 'none',
+    fontSize: theme.fontSizes.sm,
+    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.black,
+  },
+
   link: {
     fontWeight: 500,
     display: 'block',
