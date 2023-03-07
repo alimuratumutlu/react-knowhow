@@ -7,6 +7,7 @@ import {
   IconLock,
   IconLink,
 } from '@tabler/icons';
+
 import { UserButton } from '../../molecules/UserButton/UserButton.component';
 import { LinksGroup } from '../../molecules/LinksGroup/LinksGroup.component';
 import { ColorSchemeToggle } from '../../molecules/ColorSchemeToggle/ColorSchemeToggle';
@@ -324,6 +325,7 @@ const mockdata = [
 
 export function NavbarNested() {
   const { classes } = useStyles();
+
   const links = mockdata.map((item) => <LinksGroup {...item} key={item.label} />);
 
   return (

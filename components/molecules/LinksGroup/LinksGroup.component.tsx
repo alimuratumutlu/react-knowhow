@@ -1,4 +1,6 @@
-import { useState } from 'react';
+/* eslint-disable @typescript-eslint/no-shadow */
+import { useId, useMemo, useState } from 'react';
+import { useRouter } from 'next/router';
 import { Group, Box, Collapse, ThemeIcon, Text, UnstyledButton } from '@mantine/core';
 import { TablerIcon, IconChevronLeft, IconChevronRight } from '@tabler/icons';
 import Link from 'next/link';
@@ -14,15 +16,28 @@ interface linksGroupProps {
 }
 
 export function LinksGroup({ icon: Icon, label, initiallyOpened, link, links }: linksGroupProps) {
-  const { classes, theme } = useStyles();
+  const { classes, theme, cx } = useStyles();
   const hasLinks = Array.isArray(links);
+
   const [opened, setOpened] = useState(initiallyOpened || false);
+  const [active, setActive] = useState<string | null>(null);
+
   const ChevronIcon = theme.dir === 'ltr' ? IconChevronRight : IconChevronLeft;
-  const items = (hasLinks ? links : []).map((item, index) => (
-    <Link key={item.label + index} href={item.link} className={classes.link} passHref>
-      <Text>{item.label}</Text>
-    </Link>
-  ));
+
+  const items = (hasLinks ? links : []).map((item) => {
+    const id = useId();
+
+    return (
+      <Link
+        key={id}
+        href={item.link}
+        className={cx(classes.link, { [classes.linkActive]: id === active })}
+        passHref
+      >
+        <Text onClick={() => setActive(id)}>{item.label}</Text>
+      </Link>
+    );
+  });
 
   return (
     <>
