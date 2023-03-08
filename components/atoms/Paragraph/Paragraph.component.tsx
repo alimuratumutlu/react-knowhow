@@ -7,7 +7,7 @@ interface paragraphProps {
 
 export default function Paragraph({ children }: paragraphProps) {
   return (
-    <Text color="gray.7" align="justify" size="lg" mb="xl" pl="sm" pr="sm">
+    <Text color="gray.7" align="justify" size="lg" mb="md" pl="sm" pr="sm">
       {children}
     </Text>
   );

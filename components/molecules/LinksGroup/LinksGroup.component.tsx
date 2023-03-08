@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-shadow */
-import { useId, useMemo, useState } from 'react';
-import { useRouter } from 'next/router';
+import { useId, useState } from 'react';
 import { Group, Box, Collapse, ThemeIcon, Text, UnstyledButton } from '@mantine/core';
 import { TablerIcon, IconChevronLeft, IconChevronRight } from '@tabler/icons';
 import Link from 'next/link';
@@ -33,8 +32,9 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, link, links }: 
         href={item.link}
         className={cx(classes.link, { [classes.linkActive]: id === active })}
         passHref
+        onClick={() => setActive(id)}
       >
-        <Text onClick={() => setActive(id)}>{item.label}</Text>
+        <Text>{item.label}</Text>
       </Link>
     );
   });

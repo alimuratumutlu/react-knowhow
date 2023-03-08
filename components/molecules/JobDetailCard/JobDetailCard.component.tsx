@@ -1,9 +1,16 @@
-import { Card, Text, Group, Grid } from '@mantine/core';
+import { Card, Text, Title, Group, Grid } from '@mantine/core';
 import TechStackButton from '../TechStackButton/TechStackButton.component';
+import CompanyLogo from '../CompanyLogo/CompanyLogo.component';
+import Paragraph from '../../atoms/Paragraph/Paragraph.component';
 
 import useStyles from './JobDetailCard.styles';
 
 interface jobDetailCardProps {
+  image: string;
+  companyName: string;
+  position: string;
+  startDate: number;
+  endDate: number | string;
   methodologies: string[];
   responsibilities: string[];
   technologies: string[];
@@ -11,6 +18,11 @@ interface jobDetailCardProps {
 }
 
 export default function JobDetailCard({
+  image,
+  companyName,
+  position,
+  startDate,
+  endDate,
   methodologies,
   responsibilities,
   technologies,
@@ -18,20 +30,28 @@ export default function JobDetailCard({
 }: jobDetailCardProps) {
   const { classes } = useStyles();
   return (
-    <Card withBorder radius="md" p={0} className={classes.card}>
+    <Card withBorder radius="md" p={0} className={classes.card} ml="sm">
       <Group noWrap spacing={0}>
         <div className={classes.body}>
-          <Grid.Col xs={12}>
+          <Grid.Col xs={12} xl={12}>
+            <Group>
+              <CompanyLogo image={image} company={companyName} />
+              <Paragraph>
+                <Title>{companyName}</Title>
+                <strong>{position}</strong>
+                <Text>
+                  {startDate} -{endDate}
+                </Text>
+              </Paragraph>
+            </Group>
+          </Grid.Col>
+          <Grid.Col xs={12} xl={12}>
             <Text className={classes.title} size="lg" mb="md">
               Development Methodologies
             </Text>
             {methodologies?.map((methodology) => (
               <TechStackButton color="red.5" text={methodology} />
             ))}
-            <TechStackButton color="red.5" text="Agile" />
-            <TechStackButton color="red.5" text="Scrum" />
-            <TechStackButton color="red.5" text="Domain Driven Design" />
-            <TechStackButton color="red.5" text="CI/CD" />
           </Grid.Col>
           <Grid.Col xs={12}>
             <Text className={classes.title} size="lg" mt="xs" mb="md">
@@ -40,9 +60,6 @@ export default function JobDetailCard({
             {responsibilities?.map((responsibility) => (
               <TechStackButton color="green.5" text={responsibility} />
             ))}
-            <TechStackButton color="cyan.5" text="Front-End Development" />
-            <TechStackButton color="cyan.5" text="Team Management" />
-            <TechStackButton color="cyan.5" text="Responsive Web Design" />
           </Grid.Col>
           <Grid.Col xs={12}>
             <Text className={classes.title} size="lg" mt="xs" mb="md">
@@ -51,20 +68,6 @@ export default function JobDetailCard({
             {technologies?.map((technology) => (
               <TechStackButton text={technology} />
             ))}
-            <TechStackButton text="HTML5" />
-            <TechStackButton text="Micro Frontend Architecture" />
-            <TechStackButton text="React" />
-            <TechStackButton text="Redux" />
-            <TechStackButton text="NextJS" />
-            <TechStackButton text="Webpack" />
-            <TechStackButton text="NodeJS" />
-            <TechStackButton text="TypeScript" />
-            <TechStackButton text="Material UI" />
-            <TechStackButton text="JavaScript" />
-            <TechStackButton text="CSS" />
-            <TechStackButton text="Web Applications" />
-            <TechStackButton text="React Custom Hooks" />
-            <TechStackButton text="Object-Oriented Programming (OOP)" />
           </Grid.Col>
           <Grid.Col xs={12}>
             <Text color="dimmed" align="justify" size="md" mx="auto" mb="xl">
