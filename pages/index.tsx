@@ -5,15 +5,16 @@ import Paragraph from '../components/atoms/Paragraph/Paragraph.component';
 
 import Experiences from '../data/Experiences';
 import PersonalData from '../data/PersonalData';
+import ContactDetails from '../components/molecules/ContactDetails/ContactDetails.component';
 
 export default function HomePage() {
   const { title, text } = PersonalData;
 
   return (
     <PostTemplate title={title}>
-      <Paragraph> {text} </Paragraph>
-      {Experiences.map((jobCardData: any) => (
-        <JobDetailCard {...jobCardData} />
+      <ContactDetails />
+      {Experiences.map((jobCardData: any, index: number) => (
+        <JobDetailCard key={index} {...jobCardData} />
       ))}
     </PostTemplate>
   );

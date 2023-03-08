@@ -30,7 +30,7 @@ export default function JobDetailCard({
 }: jobDetailCardProps) {
   const { classes } = useStyles();
   return (
-    <Card withBorder radius="md" p={0} className={classes.card} ml="sm">
+    <Card withBorder radius="md" p={0} className={classes.card} ml="sm" shadow="sm">
       <Group noWrap spacing={0}>
         <div className={classes.body}>
           <Grid.Col xs={12} xl={12}>
@@ -49,27 +49,30 @@ export default function JobDetailCard({
             <Text className={classes.title} size="lg" mb="md">
               Development Methodologies
             </Text>
-            {methodologies?.map((methodology) => (
-              <TechStackButton color="red.5" text={methodology} />
+            {methodologies?.map((methodology, index) => (
+              <TechStackButton key={index} color="red.7" text={methodology} />
             ))}
           </Grid.Col>
           <Grid.Col xs={12}>
             <Text className={classes.title} size="lg" mt="xs" mb="md">
               Key Responsibilities
             </Text>
-            {responsibilities?.map((responsibility) => (
-              <TechStackButton color="green.5" text={responsibility} />
+            {responsibilities?.map((responsibility, index) => (
+              <TechStackButton key={index} color="green.8" text={responsibility} />
             ))}
           </Grid.Col>
           <Grid.Col xs={12}>
             <Text className={classes.title} size="lg" mt="xs" mb="md">
               Tech Stack
             </Text>
-            {technologies?.map((technology) => (
-              <TechStackButton text={technology} />
+            {technologies?.map((technology, index) => (
+              <TechStackButton key={index} color="blue.8" text={technology} />
             ))}
           </Grid.Col>
           <Grid.Col xs={12}>
+            <Text className={classes.title} size="lg" mt="xs" mb="md">
+              Brief History
+            </Text>
             <Text color="dimmed" align="justify" size="md" mx="auto" mb="xl">
               {description}
             </Text>
