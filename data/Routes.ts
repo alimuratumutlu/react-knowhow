@@ -7,6 +7,44 @@ import {
   IconLink,
 } from '@tabler/icons';
 
+export const userLinks = [
+  {
+    link: '#',
+    label: 'Privacy & Security',
+  },
+  {
+    link: '#',
+    label: 'Account settings',
+  },
+  {
+    link: '#',
+    label: 'Support options',
+  },
+];
+
+export const mainLinks = [
+  {
+    link: '#',
+    label: 'Book a demo',
+  },
+  {
+    link: '#',
+    label: 'Documentation',
+  },
+  {
+    link: '#',
+    label: 'Community',
+  },
+  {
+    link: '#',
+    label: 'Academy',
+  },
+  {
+    link: '#',
+    label: 'Forums',
+  },
+];
+
 const Routes = [
   {
     label: 'Murat Umutlu',

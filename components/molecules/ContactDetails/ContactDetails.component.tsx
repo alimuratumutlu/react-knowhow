@@ -16,6 +16,7 @@ const useStyles = createStyles((theme, { variant }: ContactIconStyles) => ({
     display: 'flex',
     alignItems: 'center',
     color: theme.white,
+    marginBottom: theme.spacing.lg,
   },
 
   icon: {
@@ -34,7 +35,7 @@ const useStyles = createStyles((theme, { variant }: ContactIconStyles) => ({
   },
 
   description: {
-    color: variant === 'gradient' ? theme.black : theme.white,
+    color: theme.colorScheme === 'dark' ? theme.colors.gray[5] : theme.colors.gray[9],
   },
 }));
 
@@ -80,32 +81,39 @@ export default function ContactDetails() {
   const { text } = PersonalData;
 
   return (
-    <Card
-      shadow="sm"
-      sx={(theme) => ({
-        padding: theme.spacing.sm,
-        borderRadius: theme.radius.md,
-        backgroundColor: theme.white,
-        marginLeft: theme.spacing.sm,
-        marginBottom: theme.spacing.sm,
-        border: `1px solid ${theme.colors.gray[3]}`,
-        display: 'flex',
-        flexDirection: 'row',
-      })}
-    >
-      <Grid.Col xs={12} sm={9} md={9}>
-        <Text align="justify"> {text} </Text>
+    <Grid ml="sm" mr="sm" mb="xl">
+      <Grid.Col xs={12} sm={8}>
+        <Text align="justify" size={20} mr="md">
+          {text}
+        </Text>
       </Grid.Col>
-      <Grid.Col xs={12} sm={3} md={3}>
-        {ContactData.map((contact, index) => (
-          <ContactIcon
-            key={index}
-            title={contact.title}
-            description={contact.description}
-            icon={contact.icon}
-          />
-        ))}
+      <Grid.Col xs={12} sm={4}>
+        <Card
+          shadow="sm"
+          sx={(theme) => ({
+            padding: theme.spacing.sm,
+            borderRadius: theme.radius.md,
+            backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
+            marginLeft: theme.spacing.sm,
+            marginBottom: theme.spacing.sm,
+            border: `1px solid ${
+              theme.colorScheme === 'dark' ? theme.colors.gray[9] : theme.colors.gray[1]
+            }`,
+            display: 'flex',
+            flexDirection: 'column',
+            width: '100%',
+          })}
+        >
+          {ContactData.map((contact, index) => (
+            <ContactIcon
+              key={index}
+              title={contact.title}
+              description={contact.description}
+              icon={contact.icon}
+            />
+          ))}
+        </Card>
       </Grid.Col>
-    </Card>
+    </Grid>
   );
 }

@@ -5,6 +5,9 @@ export default createStyles((theme) => ({
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
     height: 'auto',
     marginBottom: theme.spacing.xl,
+    border: `1px solid ${
+      theme.colorScheme === 'dark' ? theme.colors.gray[9] : theme.colors.gray[1]
+    }`,
   },
 
   title: {
