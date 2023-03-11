@@ -1,7 +1,9 @@
 import React from 'react';
-import { Header, Text, MediaQuery, Burger, useMantineTheme } from '@mantine/core';
+import { Group, Header, Text, MediaQuery, Burger, useMantineTheme } from '@mantine/core';
 
 import Logo from '../../atoms/Logo/Logo.component';
+
+import useStyles from './Header.styles';
 
 interface headerDefaultProps {
   opened: boolean;
@@ -53,6 +55,7 @@ const pageList = [
 
 export function HeaderDefault({ opened, setOpened }: headerDefaultProps) {
   const theme = useMantineTheme();
+  const { classes } = useStyles();
 
   return (
     <Header height={{ base: 50, md: 70 }} p="md">
@@ -67,13 +70,16 @@ export function HeaderDefault({ opened, setOpened }: headerDefaultProps) {
           />
         </MediaQuery>
         <Logo brand="Muum Dev." />
-
-        {!opened &&
-          pageList.map((page) => (
-            <Text key={page.name} mr="sm">
-              {page.name}
-            </Text>
-          ))}
+        <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
+          <Group>
+            {!opened &&
+              pageList.map((page) => (
+                <Text key={page.name} className={classes.link}>
+                  {page.name}
+                </Text>
+              ))}
+          </Group>
+        </MediaQuery>
       </div>
     </Header>
   );

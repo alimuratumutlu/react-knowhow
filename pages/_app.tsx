@@ -4,10 +4,6 @@ import { getCookie, setCookie } from 'cookies-next';
 import Head from 'next/head';
 import {
   AppShell,
-  Header,
-  Text,
-  MediaQuery,
-  Burger,
   MantineProvider,
   ColorScheme,
   ColorSchemeProvider,
