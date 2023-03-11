@@ -3,10 +3,8 @@ import Gist from 'react-gist';
 import Link from 'next/link';
 import { Text } from '@mantine/core';
 
-import Paragraph from '../../components/atoms/Paragraph/Paragraph.component';
-import SubTitle from '../../components/atoms/SubTitle/SubTitle.component';
-
-import PostTemplate from '../../templates/Post.template';
+import { Paragraph, SectionTitle } from '@components';
+import PostTemplate from '@templates/Post.template';
 
 export default function DynamicProgramming() {
   return (
@@ -26,7 +24,7 @@ export default function DynamicProgramming() {
         In general, a dynamic programming algorithm is a way of breaking a problem down into smaller
         subproblems and storing the solutions to those subproblems in memory.
       </Paragraph>
-      <SubTitle>How Dynamic Programming Works?</SubTitle>
+      <SectionTitle>How Dynamic Programming Works?</SectionTitle>
       <Paragraph>
         Dynamic programming works by solving a problem recursively, but with a twist: it stores the
         solutions to the subproblems in memory, so that they can be reused when solving larger
@@ -49,7 +47,7 @@ export default function DynamicProgramming() {
       <Paragraph>
         Here are some examples of problems that can be solved using dynamic programming:
       </Paragraph>
-      <SubTitle>Fibonacci Sequence</SubTitle>
+      <SectionTitle>Fibonacci Sequence</SectionTitle>
       <Paragraph>
         The Fibonacci sequence is a series of numbers where each number is the sum of the two
         preceding numbers. The nth number in the Fibonacci sequence can be calculated using dynamic
@@ -63,7 +61,7 @@ export default function DynamicProgramming() {
         elements fib[i-1] and fib[i-2]. Finally, we return the subarray of fib that contains the
         sequence up to n.
       </Paragraph>
-      <SubTitle>Longest Common Subsequence</SubTitle>
+      <SectionTitle>Longest Common Subsequence</SectionTitle>
       <Paragraph>
         The longest common subsequence problem is to find the longest subsequence that is common to
         two sequences. This problem can be solved using dynamic programming by breaking it down into
@@ -84,14 +82,14 @@ export default function DynamicProgramming() {
         Note that this implementation has a time complexity of O(m * n) and a space complexity of
         O(m * n), where m and n are the lengths of the input strings.
       </Paragraph>
-      <SubTitle>Knapsack Problem</SubTitle>
+      <SectionTitle>Knapsack Problem</SectionTitle>
       <Paragraph>
         The knapsack problem is to find the maximum value of items that can be put into a knapsack
         of a given size. This problem can be solved using dynamic programming by breaking it down
         into smaller subproblems.
       </Paragraph>
       <Gist id="d5b1f4683f00cb5355ea7625f50f3247" />
-      <SubTitle>Longest Increasing Subsequence</SubTitle>
+      <SectionTitle>Longest Increasing Subsequence</SectionTitle>
       <Paragraph>
         The longest increasing subsequence problem is to find the longest subsequence of a given
         sequence in which the subsequence&apos;s elements are in sorted order, lowest to highest,
@@ -104,92 +102,92 @@ export default function DynamicProgramming() {
         capacities. Finally, we reconstruct the solution by tracing back the items that were
         selected to achieve the maximum value.
       </Paragraph>
-      <SubTitle>Matrix Chain Multiplication</SubTitle>
+      <SectionTitle>Matrix Chain Multiplication</SectionTitle>
       <Paragraph>
         The matrix chain multiplication problem is to find the most efficient way to multiply a
         given sequence of matrices. This problem can be solved using dynamic programming by breaking
         it down into smaller subproblems.
       </Paragraph>
-      <SubTitle>0-1 Knapsack Problem</SubTitle>
+      <SectionTitle>0-1 Knapsack Problem</SectionTitle>
       <Paragraph>
         The 0-1 knapsack problem is to find the maximum value of items that can be put into a
         knapsack of a given size. This problem can be solved using dynamic programming by breaking
         it down into smaller subproblems.
       </Paragraph>
-      <SubTitle>Shortest Common Supersequence</SubTitle>
+      <SectionTitle>Shortest Common Supersequence</SectionTitle>
       <Paragraph>
         The shortest common supersequence problem is to find the shortest supersequence that is
         common to two sequences. This problem can be solved using dynamic programming by breaking it
         down into smaller subproblems.
       </Paragraph>
-      <SubTitle>Longest Palindromic Subsequence</SubTitle>
+      <SectionTitle>Longest Palindromic Subsequence</SectionTitle>
       <Paragraph>
         The longest palindromic subsequence problem is to find the longest subsequence of a given
         sequence that is also a palindrome. This problem can be solved using dynamic programming by
         breaking it down into smaller subproblems.
       </Paragraph>
-      <SubTitle>Longest Repeating Subsequence</SubTitle>
+      <SectionTitle>Longest Repeating Subsequence</SectionTitle>
       <Paragraph>
         The longest repeating subsequence problem is to find the longest subsequence that is
         repeated in a given sequence. This problem can be solved using dynamic programming by
         breaking it down into smaller subproblems.
       </Paragraph>
-      <SubTitle>Longest Palindromic Substring</SubTitle>
+      <SectionTitle>Longest Palindromic Substring</SectionTitle>
       <Paragraph>
         The longest palindromic substring problem is to find the longest substring of a given
         sequence that is also a palindrome. This problem can be solved using dynamic programming by
         breaking it down into smaller subproblems.
       </Paragraph>
-      <SubTitle>Word Break Problem</SubTitle>
+      <SectionTitle>Word Break Problem</SectionTitle>
       <Paragraph>
         The word break problem is to find out if a given sequence of characters can be segmented
         into a space-separated sequence of one or more dictionary words. This problem can be solved
         using dynamic programming by breaking it down into smaller subproblems.
       </Paragraph>
-      <SubTitle>Subset Sum Problem</SubTitle>
+      <SectionTitle>Subset Sum Problem</SectionTitle>
       <Paragraph>
         The subset sum problem is to find out if there is a subset of a given set with sum equal to
         a given number. This problem can be solved using dynamic programming by breaking it down
         into smaller subproblems.
       </Paragraph>
-      <SubTitle>Minimum Partition</SubTitle>
+      <SectionTitle>Minimum Partition</SectionTitle>
       <Paragraph>
         The minimum partition problem is to find the minimum difference between the sum of two
         subsets of a given set. This problem can be solved using dynamic programming by breaking it
         down into smaller subproblems.
       </Paragraph>
-      <SubTitle>Longest Bitonic Subsequence</SubTitle>
+      <SectionTitle>Longest Bitonic Subsequence</SectionTitle>
       <Paragraph>
         The longest bitonic subsequence problem is to find the longest bitonic subsequence of a
         given sequence. This problem can be solved using dynamic programming by breaking it down
         into smaller subproblems.
       </Paragraph>
-      <SubTitle>Count of subset sum with a given sum</SubTitle>
+      <SectionTitle>Count of subset sum with a given sum</SectionTitle>
       <Paragraph>
         The count of subset sum problem is to find the number of subsets of a given set with sum
         equal to a given number. This problem can be solved using dynamic programming by breaking it
         down into smaller subproblems.
       </Paragraph>
-      <SubTitle>Longest Common Substring</SubTitle>
+      <SectionTitle>Longest Common Substring</SectionTitle>
       <Paragraph>
         The longest common substring problem is to find the longest substring that is common to two
         strings. This problem can be solved using dynamic programming by breaking it down into
         smaller subproblems.
       </Paragraph>
-      <SubTitle>Maximum Sum Increasing Subsequence</SubTitle>
+      <SectionTitle>Maximum Sum Increasing Subsequence</SectionTitle>
       <Paragraph>
         The maximum sum increasing subsequence problem is to find the maximum sum of an increasing
         subsequence of a given sequence. This problem can be solved using dynamic programming by
         breaking it down into smaller subproblems.
       </Paragraph>
-      <SubTitle>Longest Alternating Subsequence</SubTitle>
+      <SectionTitle>Longest Alternating Subsequence</SectionTitle>
       <Paragraph>
         The longest alternating subsequence problem is to find the longest subsequence of a given
         sequence such that all elements of the subsequence are alternating. This problem can be
         solved using dynamic programming by breaking it down into smaller subproblems.
       </Paragraph>
 
-      <SubTitle>References</SubTitle>
+      <SectionTitle>References</SectionTitle>
       <Paragraph>
         <Text>
           <Link href="https://en.wikipedia.org/wiki/Dynamic_programming">

@@ -10,15 +10,16 @@ import {
   useMantineTheme,
 } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
-import { NavbarNested } from '../components/organisms/Navbar/Navbar.component';
-import { HeaderDefault } from '../components/organisms/Header/Header.component';
+import CustomNavbar from '@layout/Navbar/Navbar.component';
+import { HeaderDefault } from '@layout/Header/Header.component';
+import CustomAside from '@layout/Aside/Aside.component';
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
   const [colorScheme, setColorScheme] = useState<ColorScheme>(props.colorScheme);
 
   const theme = useMantineTheme();
-  const [opened, setOpened] = useState(false);
+  const [opened, setOpened] = useState(true);
 
   const toggleColorScheme = (value?: ColorScheme) => {
     const nextColorScheme = value || (colorScheme === 'dark' ? 'light' : 'dark');
@@ -40,7 +41,8 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
             <AppShell
               padding={0}
               header={<HeaderDefault opened={opened} setOpened={setOpened} />}
-              navbar={<NavbarNested opened={opened} />}
+              navbar={<CustomNavbar opened={opened} />}
+              aside={<CustomAside />}
               styles={() => ({
                 main: {
                   backgroundColor:

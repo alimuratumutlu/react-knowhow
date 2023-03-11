@@ -14,7 +14,13 @@ interface linksGroupProps {
   links?: { label: string; link: string }[];
 }
 
-export function LinksGroup({ icon: Icon, label, initiallyOpened, link, links }: linksGroupProps) {
+export default function LinksGroup({
+  icon: Icon,
+  label,
+  initiallyOpened,
+  link,
+  links,
+}: linksGroupProps) {
   const { classes, theme, cx } = useStyles();
   const hasLinks = Array.isArray(links);
 

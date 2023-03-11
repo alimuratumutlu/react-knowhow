@@ -1,12 +1,9 @@
 import React from 'react';
-import Gist from 'react-gist';
 
 import { Text } from '@mantine/core';
 
-import Paragraph from '../../components/atoms/Paragraph/Paragraph.component';
-import SubTitle from '../../components/atoms/SubTitle/SubTitle.component';
-
-import PostTemplate from '../../templates/Post.template';
+import { Paragraph, SectionTitle } from '@components';
+import PostTemplate from '@templates/Post.template';
 
 export default function OptimizationAlgorithms() {
   return (
@@ -28,7 +25,7 @@ export default function OptimizationAlgorithms() {
         the gradient of the objective function, which tells the algorithm in which direction the
         solution should be adjusted to improve it.
       </Paragraph>
-      <SubTitle>How Optimization Algorithms Work?</SubTitle>
+      <SectionTitle>How Optimization Algorithms Work?</SectionTitle>
       <Paragraph> Optimization algorithms typically follow a similar structure:</Paragraph>
       <Paragraph>
         <Text>
@@ -43,39 +40,39 @@ export default function OptimizationAlgorithms() {
       <Paragraph>
         Here are some examples of problems that can be solved using optimization algorithms:
       </Paragraph>
-      <SubTitle>Linear Programming</SubTitle>
+      <SectionTitle>Linear Programming</SectionTitle>
       <Paragraph>
         Linear programming is a technique used to find the optimal solution to a problem that
         involves linear constraints. This problem can be solved using optimization algorithms such
         as the simplex method or the interior-point method.
       </Paragraph>
 
-      <SubTitle>Nonlinear Programming</SubTitle>
+      <SectionTitle>Nonlinear Programming</SectionTitle>
       <Paragraph>
         Nonlinear programming is a technique used to find the optimal solution to a problem that
         involves nonlinear constraints. This problem can be solved using optimization algorithms
         such as the gradient descent method or the Newton method.
       </Paragraph>
 
-      <SubTitle>Integer Programming</SubTitle>
+      <SectionTitle>Integer Programming</SectionTitle>
       <Paragraph>
         Integer programming is a technique used to find the optimal solution to a problem that
         involves integer constraints. This problem can be solved using optimization algorithms such
         as the branch and bound method or the cutting plane method.
       </Paragraph>
-      <SubTitle>Convex Optimization</SubTitle>
+      <SectionTitle>Convex Optimization</SectionTitle>
       <Paragraph>
         Convex optimization is a technique used to find the optimal solution to a problem that
         involves convex constraints. This problem can be solved using optimization algorithms such
         as the gradient descent method or the Newton method.
       </Paragraph>
-      <SubTitle>Quadratic Programming</SubTitle>
+      <SectionTitle>Quadratic Programming</SectionTitle>
       <Paragraph>
         Quadratic programming is a technique used to find the optimal solution to a problem that
         involves quadratic constraints. This problem can be solved using optimization algorithms
         such as the gradient descent method or the Newton method.
       </Paragraph>
-      <SubTitle>Nonlinear Least Squares</SubTitle>
+      <SectionTitle>Nonlinear Least Squares</SectionTitle>
       <Paragraph>
         Nonlinear least squares is a technique used to find the optimal solution to a problem that
         involves nonlinear least squares constraints. This problem can be solved using optimization

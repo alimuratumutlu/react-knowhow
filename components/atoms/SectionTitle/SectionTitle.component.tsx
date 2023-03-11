@@ -1,12 +1,12 @@
 import React from 'react';
 import { Title } from '@mantine/core';
-import useStyles from './SubTitle.styles';
+import useStyles from './SectionTitle.styles';
 
-interface subTitleProps {
+interface SectionTitleProps {
   children: React.ReactNode | React.ReactNode[] | string;
 }
 
-export default function SubTitle({ children }: subTitleProps) {
+export default function SectionTitle({ children }: SectionTitleProps) {
   const { classes } = useStyles();
 
   return (

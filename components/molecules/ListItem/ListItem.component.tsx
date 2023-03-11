@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from '@mantine/core';
 
-import Paragraph from '../../atoms/Paragraph/Paragraph.component';
+import { Paragraph } from '@components';
 
 interface listItemProps {
   itemLabel?: string;

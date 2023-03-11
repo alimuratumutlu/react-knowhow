@@ -1,7 +1,6 @@
 import { Card, Text, Title, Group, Grid } from '@mantine/core';
-import TechStackButton from '../TechStackButton/TechStackButton.component';
-import CompanyLogo from '../CompanyLogo/CompanyLogo.component';
-import Paragraph from '../../atoms/Paragraph/Paragraph.component';
+
+import { CustomButton, CompanyLogo, Paragraph } from '@components';
 
 import useStyles from './JobDetailCard.styles';
 
@@ -50,7 +49,7 @@ export default function JobDetailCard({
               Development Methodologies
             </Text>
             {methodologies?.map((methodology, index) => (
-              <TechStackButton key={index} color="red.7" text={methodology} />
+              <CustomButton key={index} color="red.7" text={methodology} />
             ))}
           </Grid.Col>
           <Grid.Col xs={12}>
@@ -58,7 +57,7 @@ export default function JobDetailCard({
               Key Responsibilities
             </Text>
             {responsibilities?.map((responsibility, index) => (
-              <TechStackButton key={index} color="green.8" text={responsibility} />
+              <CustomButton key={index} color="green.8" text={responsibility} />
             ))}
           </Grid.Col>
           <Grid.Col xs={12}>
@@ -66,7 +65,7 @@ export default function JobDetailCard({
               Tech Stack
             </Text>
             {technologies?.map((technology, index) => (
-              <TechStackButton key={index} color="blue.8" text={technology} />
+              <CustomButton key={index} color="blue.8" text={technology} />
             ))}
           </Grid.Col>
           <Grid.Col xs={12}>

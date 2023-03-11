@@ -1,15 +1,14 @@
 import { Navbar, ScrollArea } from '@mantine/core';
-import { LinksGroup } from '../../molecules/LinksGroup/LinksGroup.component';
+import { LinksGroup } from '@components';
 
-import Routes from '../../../data/Routes';
-
+import Routes from '@data/Routes';
 import useStyles from './Navbar.styles';
 
 interface navbarNestedProps {
   opened: boolean;
 }
 
-export function NavbarNested({ opened }: navbarNestedProps) {
+export default function CustomNavbar({ opened }: navbarNestedProps) {
   const { classes } = useStyles();
 
   const links = Routes.map((item) => <LinksGroup {...item} key={item.label} />);

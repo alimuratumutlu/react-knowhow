@@ -1,10 +1,8 @@
 import React from 'react';
 import Gist from 'react-gist';
 
-import Paragraph from '../../components/atoms/Paragraph/Paragraph.component';
-import SubTitle from '../../components/atoms/SubTitle/SubTitle.component';
-
-import PostTemplate from '../../templates/Post.template';
+import { Paragraph, SectionTitle } from '@components';
+import PostTemplate from '@templates/Post.template';
 
 export default function GraphAlgorithms() {
   return (
@@ -24,7 +22,7 @@ export default function GraphAlgorithms() {
         In general, a graph algorithm is a way of analyzing the relationships between nodes in a
         graph.
       </Paragraph>
-      <SubTitle>Breadth-First Search</SubTitle>
+      <SectionTitle>Breadth-First Search</SectionTitle>
       <Paragraph>
         Breadth-first search is a searching algorithm that starts at the root node and explores all
         the neighboring nodes at the current depth before moving on to nodes at the next depth.
@@ -62,7 +60,7 @@ export default function GraphAlgorithms() {
         In the above graph, node A has neighbors B and C, node B has neighbors A, D, and E, and so
         on.
       </Paragraph>
-      <SubTitle>Depth-First Search</SubTitle>
+      <SectionTitle>Depth-First Search</SectionTitle>
       <Paragraph>
         Depth-first search is another searching algorithm that explores as far as possible along
         each branch before backtracking.
@@ -82,7 +80,7 @@ export default function GraphAlgorithms() {
       <Paragraph>
         In the end, we call graph.dfs(nodeA) to perform the Depth-First Search starting from nodeA.
       </Paragraph>
-      <SubTitle>Dijkstra&apos;s Algorithm</SubTitle>
+      <SectionTitle>Dijkstra&apos;s Algorithm</SectionTitle>
       <Paragraph>
         Dijkstra&apos;s algorithm is a shortest path algorithm that finds the shortest path between
         two nodes in a weighted graph.
@@ -109,7 +107,7 @@ export default function GraphAlgorithms() {
         The while loop continues until the priority queue is empty. Inside the loop, the function
         extracts
       </Paragraph>
-      <SubTitle>Bellman-Ford Algorithm</SubTitle>
+      <SectionTitle>Bellman-Ford Algorithm</SectionTitle>
       <Paragraph>
         Bellman-Ford algorithm is another shortest path algorithm that can handle negative weight
         edges, unlike Dijkstr&apos;s algorithm.
@@ -126,7 +124,7 @@ export default function GraphAlgorithms() {
         In the example, the bellmanFord function returns the shortest distances and predecessors for
         each node in the graph, starting from node A.
       </Paragraph>
-      <SubTitle>Prim&apos;s Algorithm</SubTitle>
+      <SectionTitle>Prim&apos;s Algorithm</SectionTitle>
       <Paragraph>
         Prim&apos;s algorithm is a minimum spanning tree algorithm that finds the minimum spanning
         tree for a connected, weighted graph.
@@ -146,7 +144,7 @@ export default function GraphAlgorithms() {
         edge is less than the current key value of a vertex, the parent of that vertex is updated to
         the current vertex. Finally, the array of parent vertices is returned.
       </Paragraph>
-      <SubTitle>Kruskal&apos;s Algorithm</SubTitle>
+      <SectionTitle>Kruskal&apos;s Algorithm</SectionTitle>
       <Paragraph>
         Kruskal&apos;s algorithm is another minimum spanning tree algorithm that finds the minimum
         spanning tree by building it up one edge at a time.
@@ -158,7 +156,7 @@ export default function GraphAlgorithms() {
         function and union function are used to implement the union-find data structure, which is
         used to check whether adding an edge to the minimum spanning tree will create a cycle.
       </Paragraph>
-      <SubTitle>Floyd-Warshall Algorithm</SubTitle>
+      <SectionTitle>Floyd-Warshall Algorithm</SectionTitle>
       <Paragraph>
         Floyd-Warshall algorithm is an all-pairs shortest path algorithm that finds the shortest
         path between all pairs of nodes in a graph.

@@ -1,10 +1,7 @@
 import React from 'react';
 
-import Paragraph from '../../components/atoms/Paragraph/Paragraph.component';
-import SubTitle from '../../components/atoms/SubTitle/SubTitle.component';
-
-import PostTemplate from '../../templates/Post.template';
-import ListItem from '../../components/molecules/ListItem/ListItem.component';
+import { ListItem, Paragraph, SectionTitle } from '@components';
+import PostTemplate from '@templates/Post.template';
 
 export default function CICDToolsTechs() {
   return (
@@ -20,7 +17,7 @@ export default function CICDToolsTechs() {
       <ListItem itemDescription="💂🏼 CI/CD Workflow" />
       <ListItem itemDescription="💂🏼 CI/CD Tools and Technologies" />
       <ListItem itemDescription="💂🏼 Best Practices for CI/CD" />
-      <SubTitle>CI/CD Basics</SubTitle>
+      <SectionTitle>CI/CD Basics</SectionTitle>
       <Paragraph>
         CI/CD is a software development practice that emphasizes automation, collaboration, and
         rapid feedback. CI/CD is designed to ensure that code is delivered quickly and reliably,
@@ -43,7 +40,7 @@ export default function CICDToolsTechs() {
         itemLabel="🧐 Continuous Monitoring: "
         itemDescription="Continuous Monitoring involves the automatic monitoring of code in production to detect errors and issues."
       />
-      <SubTitle>CI/CD Workflow</SubTitle>
+      <SectionTitle>CI/CD Workflow</SectionTitle>
       <Paragraph>The CI/CD workflow consists of several stages, including:</Paragraph>
       <ListItem itemDescription="🚀 Code changes are made to the code repository." />
       <ListItem itemDescription="🚀 The code changes are automatically built and tested." />
@@ -51,7 +48,7 @@ export default function CICDToolsTechs() {
       <ListItem itemDescription="🚀 The code changes are tested in the staging environment." />
       <ListItem itemDescription="🚀 If the code changes pass the staging tests, they are automatically deployed to production." />
 
-      <SubTitle>CI/CD Tools and Technologies</SubTitle>
+      <SectionTitle>CI/CD Tools and Technologies</SectionTitle>
       <Paragraph>There are several CI/CD tools and technologies available, including:</Paragraph>
       <ListItem
         itemLabel="💼 Jenkins: "
@@ -87,19 +84,19 @@ export default function CICDToolsTechs() {
         itemDescription="Continuous Integration and Continuous Deployment platform."
       />
 
-      <SubTitle>Best Practices for CI/CD</SubTitle>
+      <SectionTitle>Best Practices for CI/CD</SectionTitle>
       <Paragraph>Here are some best practices for CI/CD:</Paragraph>
-      <SubTitle>Automation</SubTitle>
+      <SectionTitle>Automation</SectionTitle>
       <Paragraph>
         Automation is a critical aspect of CI/CD. You should automate as much of the CI/CD process
         as possible to ensure that code is delivered quickly and reliably.
       </Paragraph>
-      <SubTitle>Collaboration</SubTitle>
+      <SectionTitle>Collaboration</SectionTitle>
       <Paragraph>
         Collaboration is important for ensuring that code is developed and deployed smoothly. You
         should encourage collaboration between developers, operations, and other stakeholders.
       </Paragraph>
-      <SubTitle>Testing</SubTitle>
+      <SectionTitle>Testing</SectionTitle>
       <Paragraph>
         Testing is essential for ensuring the quality and functionality of your code. You should
         test your code thoroughly using tools such as unit testing and integration testing.

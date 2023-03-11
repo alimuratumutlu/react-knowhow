@@ -7,6 +7,7 @@ export default createStyles((theme) => ({
     fontWeight: 800,
     letterSpacing: -2,
     paddingRight: 20,
+    cursor: 'pointer',
 
     [theme.fn.smallerThan('md')]: {
       fontSize: 15,

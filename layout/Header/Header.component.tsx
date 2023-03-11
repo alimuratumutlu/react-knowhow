@@ -1,7 +1,6 @@
 import React from 'react';
 import { Group, Header, Text, MediaQuery, Burger, useMantineTheme } from '@mantine/core';
-
-import Logo from '../../atoms/Logo/Logo.component';
+import { Logo } from '@components';
 
 import useStyles from './Header.styles';
 
@@ -20,16 +19,16 @@ const pageList = [
     link: '/algorithms',
   },
   {
-    name: 'Data Structures',
-    link: '/data-structures',
-  },
-  {
     name: 'Architecture',
     link: '/architecture',
   },
   {
-    name: 'CI / CD Knowledge',
-    link: '/ci-cd-knowledge',
+    name: 'Blockchain',
+    link: '/blockchain',
+  },
+  {
+    name: 'CI / CD',
+    link: '/ci-cd',
   },
   {
     name: 'Cloud',
@@ -42,10 +41,6 @@ const pageList = [
   {
     name: 'Front End',
     link: '/front-end',
-  },
-  {
-    name: 'Blockchain',
-    link: '/blockchain',
   },
   {
     name: 'Security',
@@ -70,14 +65,13 @@ export function HeaderDefault({ opened, setOpened }: headerDefaultProps) {
           />
         </MediaQuery>
         <Logo brand="Muum Dev." />
-        <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
+        <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
           <Group>
-            {!opened &&
-              pageList.map((page) => (
-                <Text key={page.name} className={classes.link}>
-                  {page.name}
-                </Text>
-              ))}
+            {pageList.map((page) => (
+              <Text key={page.name} className={classes.link}>
+                {page.name}
+              </Text>
+            ))}
           </Group>
         </MediaQuery>
       </div>

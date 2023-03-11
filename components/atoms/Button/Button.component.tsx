@@ -1,12 +1,12 @@
 import { Button } from '@mantine/core';
 import { IconHash } from '@tabler/icons-react';
 
-interface ButtonCopyProps {
+interface customButtonProps {
   text: string;
   color?: string;
 }
 
-export default function TechStackButton({ text, color = 'indigo.5' }: ButtonCopyProps) {
+export default function CustomButton({ text, color = 'indigo.5' }: customButtonProps) {
   return (
     <Button
       color={color}

@@ -1,10 +1,8 @@
 import React from 'react';
 import Gist from 'react-gist';
 
-import Paragraph from '../../components/atoms/Paragraph/Paragraph.component';
-import SubTitle from '../../components/atoms/SubTitle/SubTitle.component';
-
-import PostTemplate from '../../templates/Post.template';
+import { Paragraph, SectionTitle } from '@components';
+import PostTemplate from '@templates/Post.template';
 
 export default function SearchingAlgorithms() {
   return (
@@ -25,7 +23,7 @@ export default function SearchingAlgorithms() {
         In general, a searching algorithm is a way of finding a specific item in a collection of
         data.
       </Paragraph>
-      <SubTitle>Linear Search</SubTitle>
+      <SectionTitle>Linear Search</SectionTitle>
       <Paragraph>
         Linear search, also known as sequential search, is a simple searching algorithm that checks
         every element in a list until it finds the item it is looking for.
@@ -38,7 +36,7 @@ export default function SearchingAlgorithms() {
         through each element of the array, and uses an if statement to compare each element with the
         target value. If a match is found, the index of the element is returned.
       </Paragraph>
-      <SubTitle>Binary Search</SubTitle>
+      <SectionTitle>Binary Search</SectionTitle>
       <Paragraph>
         Binary search is a faster searching algorithm that only works on sorted lists. It works by
         repeatedly dividing the list in half until it finds the item it is looking for.
@@ -60,7 +58,7 @@ export default function SearchingAlgorithms() {
         search interval is empty, at which point the function returns -1 to indicate that the target
         value was not found in the array.
       </Paragraph>
-      <SubTitle>Interpolation Search</SubTitle>
+      <SectionTitle>Interpolation Search</SectionTitle>
       <Paragraph>
         Interpolation search is another faster searching algorithm that works on sorted lists. It
         works by using interpolation to guess where the item might be, and then checks that position
@@ -105,7 +103,7 @@ export default function SearchingAlgorithms() {
         can be more efficient than binary search when the values in the array are uniformly
         distributed.
       </Paragraph>
-      <SubTitle>Hashing</SubTitle>
+      <SectionTitle>Hashing</SectionTitle>
       <Paragraph>
         Hashing is a searching algorithm that uses a hash function to generate a unique key for each
         item in a collection of data. The key is used to quickly find the item without having to

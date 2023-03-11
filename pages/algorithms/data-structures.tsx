@@ -1,10 +1,8 @@
 import React from 'react';
 import Gist from 'react-gist';
 
-import Paragraph from '../../components/atoms/Paragraph/Paragraph.component';
-import SubTitle from '../../components/atoms/SubTitle/SubTitle.component';
-
-import PostTemplate from '../../templates/Post.template';
+import { Paragraph, SectionTitle } from '@components';
+import PostTemplate from '@templates/Post.template';
 
 export default function DataStructures() {
   return (
@@ -20,12 +18,12 @@ export default function DataStructures() {
         accessed and used efficiently. The choice of data structure depends on the specific problem
         that needs to be solved, as well as the constraints and requirements of the system.
       </Paragraph>
-      <SubTitle>Types of Data Structures</SubTitle>
+      <SectionTitle>Types of Data Structures</SectionTitle>
       <Paragraph>
         There are many different types of data structures, but here are some of the most commonly
         used ones:
       </Paragraph>
-      <SubTitle>Arrays</SubTitle>
+      <SectionTitle>Arrays</SectionTitle>
       <Paragraph>
         An array is a collection of elements, each identified by an index or a key. Arrays are
         typically used to store data of the same type, such as a list of numbers or a list of
@@ -33,7 +31,7 @@ export default function DataStructures() {
         flexibility, as their size is fixed when they are created.
       </Paragraph>
       <Gist id="ef13ef65145bcdae3757677391fa8f51" />
-      <SubTitle>Linked Lists</SubTitle>
+      <SectionTitle>Linked Lists</SectionTitle>
       <Paragraph>
         A linked list is a collection of elements, each containing a value and a pointer to the next
         element in the list. Linked lists are used to store data of any type and can be easily
@@ -41,7 +39,7 @@ export default function DataStructures() {
         requires traversing the list from the beginning, which can be time-consuming.
       </Paragraph>
       <Gist id="438138d781047d1cf69a50bbdd8147cd" />
-      <SubTitle>Stacks</SubTitle>
+      <SectionTitle>Stacks</SectionTitle>
       <Paragraph>
         A stack is a data structure that follows the Last In, First Out (LIFO) principle. Elements
         are added to and removed from the top of the stack, and the most recently added element is
@@ -49,7 +47,7 @@ export default function DataStructures() {
         redo operations, and other similar tasks.
       </Paragraph>
       <Gist id="77c09110753a97cebf900a49e31b639b" />
-      <SubTitle>Queues</SubTitle>
+      <SectionTitle>Queues</SectionTitle>
       <Paragraph>
         A queue is a data structure that follows the First In, First Out (FIFO) principle. Elements
         are added to the back of the queue and removed from the front, and the oldest element is
@@ -57,7 +55,7 @@ export default function DataStructures() {
         printing jobs or network requests.
       </Paragraph>
       <Gist id="5cbb95e4c7ef066696afe825db326345" />
-      <SubTitle>Trees</SubTitle>
+      <SectionTitle>Trees</SectionTitle>
       <Paragraph>
         A tree is a hierarchical data structure that consists of nodes connected by edges. Each node
         contains a value, and the edges define the relationship between the nodes. Trees are used to
@@ -70,7 +68,7 @@ export default function DataStructures() {
         its edges.
       </Paragraph>
       <Gist id="fb7506c3c9fd6870405fa809d7788145" />
-      <SubTitle>Graphs</SubTitle>
+      <SectionTitle>Graphs</SectionTitle>
       <Paragraph>
         A graph is a collection of nodes and edges that can be connected in any way. Graphs are used
         to represent complex relationships between elements, such as social networks, road networks,

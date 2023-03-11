@@ -1,10 +1,8 @@
 import React from 'react';
 import Gist from 'react-gist';
 
-import Paragraph from '../../components/atoms/Paragraph/Paragraph.component';
-import SubTitle from '../../components/atoms/SubTitle/SubTitle.component';
-
-import PostTemplate from '../../templates/Post.template';
+import { Paragraph, SectionTitle } from '@components';
+import PostTemplate from '@templates/Post.template';
 
 export default function SortingAlgorithms() {
   return (
@@ -27,7 +25,7 @@ export default function SortingAlgorithms() {
         There are many different types of sorting algorithms, but here are some of the most commonly
         used ones:
       </Paragraph>
-      <SubTitle>Bubble Sort</SubTitle>
+      <SectionTitle>Bubble Sort</SectionTitle>
       <Paragraph>
         Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares
         adjacent elements and swaps them if they are in the wrong order. The pass through the list
@@ -45,7 +43,7 @@ export default function SortingAlgorithms() {
         array of numbers and call the bubbleSort function to sort the array. Finally, we log the
         sorted array to the console.
       </Paragraph>
-      <SubTitle>Selection Sort</SubTitle>
+      <SectionTitle>Selection Sort</SectionTitle>
       <Paragraph>
         Selection sort is an in-place comparison sorting algorithm that sorts an array by repeatedly
         finding the minimum element from unsorted part and putting it at the beginning.
@@ -72,7 +70,7 @@ export default function SortingAlgorithms() {
         The function repeats this process until the entire array is sorted, then returns the sorted
         array.
       </Paragraph>
-      <SubTitle>Insertion Sort</SubTitle>
+      <SectionTitle>Insertion Sort</SectionTitle>
       <Paragraph>
         Insertion sort is another simple sorting algorithm that builds the final sorted array one
         item at a time. It is much less efficient on large lists than more advanced algorithms such
@@ -96,7 +94,7 @@ export default function SortingAlgorithms() {
         We continue this process until we have gone through all the elements in the array, resulting
         in a sorted array.
       </Paragraph>
-      <SubTitle>Merge Sort</SubTitle>
+      <SectionTitle>Merge Sort</SectionTitle>
       <Paragraph>
         Merge sort is a divide-and-conquer algorithm that works by dividing the input array into
         smaller arrays, sorting these smaller arrays, and then merging them back into a single,
@@ -111,7 +109,7 @@ export default function SortingAlgorithms() {
         appends the remaining elements of the other input array to the output array.
       </Paragraph>
 
-      <SubTitle>Quick Sort</SubTitle>
+      <SectionTitle>Quick Sort</SectionTitle>
       <Paragraph>
         Quick sort is another divide-and-conquer algorithm that works by selecting a
         &apos;pivot&apos; element from the array and partitioning the other elements into two

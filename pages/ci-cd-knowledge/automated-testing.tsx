@@ -1,10 +1,7 @@
 import React from 'react';
 
-import Paragraph from '../../components/atoms/Paragraph/Paragraph.component';
-import SubTitle from '../../components/atoms/SubTitle/SubTitle.component';
-
-import PostTemplate from '../../templates/Post.template';
-import ListItem from '../../components/molecules/ListItem/ListItem.component';
+import { ListItem, Paragraph, SectionTitle } from '@components';
+import PostTemplate from '@templates/Post.template';
 
 export default function AutomatedTesting() {
   return (
@@ -23,7 +20,7 @@ export default function AutomatedTesting() {
       <ListItem itemDescription="🥷🏼 Automated Testing Types" />
       <ListItem itemDescription="🥷🏼 Automated Testing Tools" />
 
-      <SubTitle>Automated Testing Basics</SubTitle>
+      <SectionTitle>Automated Testing Basics</SectionTitle>
       <Paragraph>
         Automated testing involves the use of tools and scripts to automate the testing process.
         Automated testing is designed to reduce the time and effort required for software testing
@@ -55,7 +52,7 @@ export default function AutomatedTesting() {
         itemDescription="Used by automated tests to test the software."
       />
 
-      <SubTitle>Types of Automated Testing</SubTitle>
+      <SectionTitle>Types of Automated Testing</SectionTitle>
       <ListItem
         itemLabel="🍓 Unit Testing: "
         itemDescription="Unit Testing involves the testing of individual software components or modules."
@@ -77,7 +74,7 @@ export default function AutomatedTesting() {
         itemDescription="Security Testing involves the testing of the security and vulnerabilities of the software."
       />
 
-      <SubTitle>Automated Testing Tools</SubTitle>
+      <SectionTitle>Automated Testing Tools</SectionTitle>
       <ListItem
         itemLabel="📺 Selenium: "
         itemDescription="Selenium is a popular testing tool for web applications."
