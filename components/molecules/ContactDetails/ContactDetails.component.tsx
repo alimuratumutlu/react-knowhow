@@ -64,7 +64,6 @@ export default function ContactDetails() {
             padding: theme.spacing.sm,
             borderRadius: theme.radius.md,
             backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
-            marginLeft: theme.spacing.sm,
             marginBottom: theme.spacing.sm,
             border: `1px solid ${
               theme.colorScheme === 'dark' ? theme.colors.gray[9] : theme.colors.gray[1]

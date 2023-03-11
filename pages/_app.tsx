@@ -15,7 +15,7 @@ import {
 } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
 import { NavbarNested } from '../components/organisms/Navbar/Navbar.component';
-import Logo from '../components/atoms/Logo/Logo.component';
+import { HeaderDefault } from '../components/organisms/Header/Header.component';
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
@@ -43,26 +43,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
           <NotificationsProvider>
             <AppShell
               padding={0}
-              header={
-                <Header height={{ base: 50, md: 70 }} p="md">
-                  <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-                    <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
-                      <Burger
-                        opened={opened}
-                        onClick={() => setOpened((o) => !o)}
-                        size="sm"
-                        color={theme.colors.gray[6]}
-                        mr="xl"
-                      />
-                    </MediaQuery>
-                    <Logo brand="Muum Dev." />
-
-                    <Text>Experience</Text>
-                    <Text>About</Text>
-                    <Text>Contact</Text>
-                  </div>
-                </Header>
-              }
+              header={<HeaderDefault opened={opened} setOpened={setOpened} />}
               navbar={<NavbarNested opened={opened} />}
               styles={() => ({
                 main: {
