@@ -11,7 +11,7 @@ interface headerDefaultProps {
 
 const pageList = [
   {
-    name: 'Murat Umutlu',
+    name: 'CV Resume',
     link: '/murat-umutlu',
   },
   {
@@ -64,7 +64,7 @@ export function HeaderDefault({ opened, setOpened }: headerDefaultProps) {
             mr="xl"
           />
         </MediaQuery>
-        <Logo brand="Muum Dev." />
+        <Logo brand="Muum Development" />
         <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
           <Group>
             {pageList.map((page) => (

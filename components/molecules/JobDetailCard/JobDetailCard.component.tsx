@@ -36,11 +36,15 @@ export default function JobDetailCard({
             <Group>
               <CompanyLogo image={image} company={companyName} />
               <Paragraph>
-                <Title>{companyName}</Title>
-                <strong>{position}</strong>
-                <Text>
+                <Title weight={600} size="h3">
+                  {companyName}
+                </Title>
+                <Title weight={500} size="h5">
+                  {position}
+                </Title>
+                <Title weight={300} size="h6">
                   {startDate} -{endDate}
-                </Text>
+                </Title>
               </Paragraph>
             </Group>
           </Grid.Col>
