@@ -1,43 +1,13 @@
 import React from 'react';
 
-import { createStyles, ThemeIcon, Text, Grid, Box, Card } from '@mantine/core';
+import { ThemeIcon, Text, Grid, Box, Card } from '@mantine/core';
 
 import ContactData from '../../../data/ContactData';
 import PersonalData from '../../../data/PersonalData';
 
+import useStyles from './ContactDetails.style';
+
 type ContactIconVariant = 'white' | 'gradient';
-
-interface ContactIconStyles {
-  variant: ContactIconVariant;
-}
-
-const useStyles = createStyles((theme, { variant }: ContactIconStyles) => ({
-  wrapper: {
-    display: 'flex',
-    alignItems: 'center',
-    color: theme.white,
-    marginBottom: theme.spacing.lg,
-  },
-
-  icon: {
-    marginRight: theme.spacing.md,
-    backgroundImage:
-      variant === 'gradient'
-        ? `linear-gradient(135deg, ${theme.colors[theme.primaryColor][4]} 0%, ${
-            theme.colors[theme.primaryColor][6]
-          } 100%)`
-        : 'none',
-    backgroundColor: 'transparent',
-  },
-
-  title: {
-    color: variant === 'gradient' ? theme.colors.gray[6] : theme.colors[theme.primaryColor][0],
-  },
-
-  description: {
-    color: theme.colorScheme === 'dark' ? theme.colors.gray[5] : theme.colors.gray[9],
-  },
-}));
 
 interface ContactIconProps extends Omit<React.ComponentPropsWithoutRef<'div'>, 'title'> {
   icon: React.FC<any>;
@@ -81,7 +51,7 @@ export default function ContactDetails() {
   const { text } = PersonalData;
 
   return (
-    <Grid ml="sm" mr="sm" mb="xl">
+    <Grid ml="xs" mr="xs" mb="xl">
       <Grid.Col xs={12} sm={8}>
         <Text align="justify" size={20} mr="md">
           {text}
