@@ -1,5 +1,5 @@
 import React from 'react';
-import { Group, Header, Text, MediaQuery, Burger, useMantineTheme } from '@mantine/core';
+import { Center, Header, Text, MediaQuery, Burger, useMantineTheme } from '@mantine/core';
 import { Logo } from '@components';
 
 import useStyles from './Header.styles';
@@ -11,7 +11,7 @@ interface headerDefaultProps {
 
 const pageList = [
   {
-    name: 'CV Resume',
+    name: 'CV RESUME',
     link: '/murat-umutlu',
   },
   {
@@ -21,6 +21,10 @@ const pageList = [
   {
     name: 'Architecture',
     link: '/architecture',
+  },
+  {
+    name: 'Authentication',
+    link: '/authentication',
   },
   {
     name: 'Blockchain',
@@ -42,10 +46,6 @@ const pageList = [
     name: 'Front End',
     link: '/front-end',
   },
-  {
-    name: 'Security',
-    link: '/security',
-  },
 ];
 
 export function HeaderDefault({ opened, setOpened }: headerDefaultProps) {
@@ -53,8 +53,15 @@ export function HeaderDefault({ opened, setOpened }: headerDefaultProps) {
   const { classes } = useStyles();
 
   return (
-    <Header height={{ base: 50, md: 70 }} p="md">
-      <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
+    <Header height={{ base: 50, md: 70 }} p="md" className={classes.HeaderContainer}>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          height: '100%',
+          backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.white,
+        }}
+      >
         <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
           <Burger
             opened={opened}
@@ -63,16 +70,16 @@ export function HeaderDefault({ opened, setOpened }: headerDefaultProps) {
             color={theme.colors.gray[6]}
             mr="xl"
           />
-        </MediaQuery>
+        </MediaQuery>{' '}
         <Logo brand="Muum Development" />
         <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
-          <Group>
+          <Center>
             {pageList.map((page) => (
               <Text key={page.name} className={classes.link}>
                 {page.name}
               </Text>
             ))}
-          </Group>
+          </Center>
         </MediaQuery>
       </div>
     </Header>

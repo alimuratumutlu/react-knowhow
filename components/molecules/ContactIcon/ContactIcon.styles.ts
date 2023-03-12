@@ -1,12 +1,6 @@
 import { createStyles } from '@mantine/core';
 
-type ContactIconVariant = 'white' | 'gradient';
-
-interface ContactIconStyles {
-  variant: ContactIconVariant;
-}
-
-export default createStyles((theme, { variant }: ContactIconStyles) => ({
+export default createStyles((theme) => ({
   wrapper: {
     display: 'flex',
     alignItems: 'center',
@@ -16,13 +10,7 @@ export default createStyles((theme, { variant }: ContactIconStyles) => ({
 
   icon: {
     marginRight: theme.spacing.md,
-    backgroundImage:
-      variant === 'gradient'
-        ? `linear-gradient(135deg, ${theme.colors[theme.primaryColor][4]} 0%, ${
-            theme.colors[theme.primaryColor][6]
-          } 100%)`
-        : 'none',
-    backgroundColor: 'transparent',
+    backgroundColor: theme.colors.pink[6],
   },
 
   title: {

@@ -8,6 +8,7 @@ export default createStyles((theme) => ({
     border: `1px solid ${
       theme.colorScheme === 'dark' ? theme.colors.gray[9] : theme.colors.gray[1]
     }`,
+    boxShadow: '0px 0px 33px 9px rgba(0,0,0,0.1)',
   },
 
   title: {

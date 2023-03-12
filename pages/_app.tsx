@@ -42,7 +42,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
               padding={0}
               header={<HeaderDefault opened={opened} setOpened={setOpened} />}
               navbar={<CustomNavbar opened={opened} />}
-              aside={<CustomAside />}
+              aside={<CustomAside hiddenBreakpoint="sm" />}
               styles={() => ({
                 main: {
                   backgroundColor:

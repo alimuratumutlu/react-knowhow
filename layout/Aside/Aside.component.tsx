@@ -1,16 +1,20 @@
 import React from 'react';
-import { Aside, Image, Title } from '@mantine/core';
+import { Aside, Image, Title, MantineNumberSize } from '@mantine/core';
 import { ContactDetails, Summary } from '@components';
 
 import useStyles from './Aside.styles';
 
-export default function CustomAside() {
+interface asideProps {
+  hiddenBreakpoint: MantineNumberSize;
+}
+
+export default function CustomAside({ hiddenBreakpoint }: asideProps) {
   const { classes } = useStyles();
 
   return (
     <Aside
       p="md"
-      hiddenBreakpoint="sm"
+      hiddenBreakpoint={hiddenBreakpoint}
       width={{ sm: 200, lg: 300 }}
       className={classes.AsideContainer}
     >

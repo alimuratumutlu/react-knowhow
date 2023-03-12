@@ -59,17 +59,9 @@ const Routes = [
   {
     label: 'Algorithms',
     icon: IconNotes,
-    links: [
-      { label: 'Data Structures', link: '/algorithms/data-structures' },
-      { label: 'Sorting Algorithms', link: '/algorithms/sorting-algorithms' },
-      { label: 'Searching Algorithms', link: '/algorithms/searching-algorithms' },
-      { label: 'Graph Algorithms', link: '/algorithms/graph-algorithms' },
-      { label: 'Dynamic Programming', link: '/algorithms/dynamic-programming' },
-      { label: 'Optimization Algorithms', link: '/algorithms/optimization-algorithms' },
-    ],
   },
   {
-    label: 'Authenticaton & Security',
+    label: 'Authenticaton',
     icon: IconLock,
     links: [
       { label: 'Access Control', link: '/authentication-security/access-control' },

@@ -15,7 +15,6 @@ export default function SectionTitle({ children }: SectionTitleProps) {
       size="h2"
       sx={(theme) => ({ fontFamily: `Greycliff CF, ${theme.fontFamily}` })}
       align="left"
-      pl="sm"
       mb="md"
       mt="xl"
       className={classes.title}
