@@ -94,3 +94,6 @@ export { default as StructuralPatterns } from './SoftwarePatterns/StructuralPatt
 
 export { default as Resume } from './CVResume/Resume';
 export { default as OpenSourceProjects } from './CVResume/OpenSourceProjects';
+
+// OTHERS
+export { default as WillBeAvailableSoon } from './General/WillBeAvailableSoon';

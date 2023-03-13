@@ -81,6 +81,7 @@ import {
   StructuralPatterns,
   Resume,
   OpenSourceProjects,
+  WillBeAvailableSoon,
 } from '@views';
 
 export const AlgorithmsContent = [
@@ -512,5 +513,13 @@ export const CVResumeContent = [
     value: 'opensourceprojects',
     label: 'Open Source Projects',
     content: OpenSourceProjects,
+  },
+];
+
+export const GeneralContent = [
+  {
+    value: 'willbeavailablesoon',
+    label: 'Will Be AvailableSoon',
+    content: WillBeAvailableSoon,
   },
 ];

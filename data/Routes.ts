@@ -1,43 +1,5 @@
 import { IconNotes, IconPresentationAnalytics, IconLock, IconLink } from '@tabler/icons';
 
-export const userLinks = [
-  {
-    link: '#',
-    label: 'Privacy & Security',
-  },
-  {
-    link: '#',
-    label: 'Account settings',
-  },
-  {
-    link: '#',
-    label: 'Support options',
-  },
-];
-
-export const mainLinks = [
-  {
-    link: '#',
-    label: 'Book a demo',
-  },
-  {
-    link: '#',
-    label: 'Documentation',
-  },
-  {
-    link: '#',
-    label: 'Community',
-  },
-  {
-    link: '#',
-    label: 'Academy',
-  },
-  {
-    link: '#',
-    label: 'Forums',
-  },
-];
-
 const Routes = [
   {
     label: 'Algorithms & Data Structures',
@@ -55,30 +17,14 @@ const Routes = [
     ],
   },
   {
-    label: 'Architecture',
+    label: 'Architecture & Basics',
     icon: IconNotes,
     links: [
       { label: 'Software Architecture', link: '/software-architecture' },
       { label: 'Software Patterns', link: '/software-patterns' },
       { label: 'Development Methodologies', link: '/development-methodologies' },
       { label: 'Development Principles', link: '/development-principles' },
-    ],
-  },
-  {
-    label: 'Authenticaton',
-    icon: IconLock,
-    links: [
-      { label: 'Access Control', link: '/authentication-security/access-control' },
-      { label: 'Authentication', link: '/authentication-security/authentication' },
-      { label: 'Best Practices', link: '/authentication-security/best-practices' },
-      { label: 'Cookies & Tokens', link: '/authentication-security/cookies-tokens' },
-      { label: 'Encryption', link: '/authentication-security/encryption' },
-      {
-        label: 'Firebase Authentication',
-        link: '/authentication-security/firebase-authentication',
-      },
-      { label: 'Logging & Auditing', link: '/authentication-security/logging-auditing' },
-      { label: 'Network Security', link: '/authentication-security/network-security' },
+      { label: 'CI / CD Techniques', link: '/ci-cd-techniques' },
     ],
   },
   {
@@ -86,24 +32,9 @@ const Routes = [
     icon: IconLink,
     links: [
       { label: 'Blockchain Development', link: '/blockchain/blockchain-development' },
-      { label: 'Consensus Mechanisms', link: '/blockchain/consensus-mechanisms' },
+      { label: 'Blockchain Security & Privacy', link: '/blockchain/blockchain-security-privacy' },
       { label: 'Decentralized Apps (DApps)', link: '/blockchain/decentralized-apps' },
-      { label: 'Security & Privacy', link: '/blockchain/security-privacy' },
       { label: 'Smart Contracts', link: '/blockchain/smart-contracts' },
-    ],
-  },
-  {
-    label: 'CI / CD Knowledge',
-    icon: IconLock,
-    links: [
-      { label: 'CI/CD Tools & Techs', link: '/ci-cd-knowledge/ci-cd-tools-techs' },
-      { label: 'Automated Testing', link: '/ci-cd-knowledge/automated-testing' },
-      { label: 'Continuous Monitoring', link: '/ci-cd-knowledge/continuous-monitoring' },
-      { label: 'Continuous Integration', link: '/ci-cd-knowledge/continuous-integration' },
-      { label: 'Continuous Delivery', link: '/ci-cd-knowledge/continuous-delivery' },
-      { label: 'Continuous Deployment', link: '/ci-cd-knowledge/continuous-deployment' },
-      { label: 'Continuous Feedback', link: '/ci-cd-knowledge/continuous-feedback' },
-      { label: 'Security & Compliance', link: '/ci-cd-knowledge/security-compliance' },
     ],
   },
   {
@@ -118,18 +49,7 @@ const Routes = [
     ],
   },
   {
-    label: 'CSS & UI Design',
-    icon: IconPresentationAnalytics,
-    links: [
-      { label: 'Responsive Design', link: '/css-ui-design/responsive-design' },
-      { label: 'UI Design Principles', link: '/css-ui-design/ui-design-principles' },
-      { label: 'Animation & Effects', link: '/css-ui-design/animation-effects' },
-      { label: 'Preprocessors', link: '/css-ui-design/preprocessors' },
-      { label: 'Performance Optimization', link: '/css-ui-design/performance-optimization' },
-    ],
-  },
-  {
-    label: 'React Best Practices',
+    label: 'React Tips & Tricks',
     icon: IconPresentationAnalytics,
     links: [
       { label: 'Accessibility', link: '/react-best-practices/accessibility' },
@@ -141,30 +61,7 @@ const Routes = [
     ],
   },
   {
-    label: 'Open Source Projects',
-    icon: IconLock,
-    links: [
-      {
-        label: '3D Object Listing on Mapbox',
-        link: '/react-challenges/3d-object-listing-on-mapbox',
-      },
-      { label: 'Ad Income Calculator', link: '/react-challenges/ad-income-calculator' },
-      { label: 'Chrome Extension', link: '/react-challenges/chrome-extension' },
-      { label: 'Crypto Tracker', link: '/react-challenges/crypto-tracker' },
-      { label: 'Hotel Directory', link: '/react-challenges/hotel-directory' },
-      { label: 'NFT Marketplace', link: '/react-challenges/nft-marketplace' },
-      { label: 'Music Player', link: '/react-challenges/music-player' },
-      { label: 'NotionDB Integration', link: '/react-challenges/notiondb-integration' },
-      { label: 'OpenAI Integration', link: '/react-challenges/openai-integration' },
-      { label: 'Quiz App (Commercial)', link: '/react-challenges/quiz-app-commercial' },
-      { label: 'Outdoor Review App', link: '/react-challenges/outdoor-review-app' },
-      { label: 'Shopify Storefront', link: '/react-challenges/shopify-storefront' },
-      { label: 'Sudoku Game', link: '/react-challenges/sudoku-game' },
-      { label: 'Three.js Objects', link: '/react-challenges/three-js-objects' },
-    ],
-  },
-  {
-    label: 'React Hooks (Custom)',
+    label: 'React (Custom) Hooks',
     icon: IconLock,
     links: [
       { label: 'useArray', link: '/react-custom-hooks/useArray' },
@@ -232,6 +129,18 @@ const Routes = [
       { label: 'useWebSocket', link: '/react-custom-hooks/useWebSocket' },
       { label: 'useWindowFocus', link: '/react-custom-hooks/useWindowFocus' },
       { label: 'useWindowSize', link: '/react-custom-hooks/useWindowSize' },
+    ],
+  },
+  {
+    label: 'Security & Authentication',
+    icon: IconLock,
+    links: [
+      { label: 'Access Control', link: '/authentication-security/access-control' },
+      { label: 'Authentication', link: '/authentication-security/authentication' },
+      { label: 'Cookies & Tokens', link: '/authentication-security/cookies-tokens' },
+      { label: 'Encryption', link: '/authentication-security/encryption' },
+      { label: 'Logging & Auditing', link: '/authentication-security/logging-auditing' },
+      { label: 'Network Security', link: '/authentication-security/network-security' },
     ],
   },
 ];
