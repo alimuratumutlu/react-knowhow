@@ -12,6 +12,8 @@ interface linksGroupProps {
   initiallyOpened?: boolean;
   link?: string;
   links?: { label: string; link: string }[];
+  active: string | null;
+  setActive: (link: string) => void;
 }
 
 export default function LinksGroup({
@@ -20,30 +22,26 @@ export default function LinksGroup({
   initiallyOpened,
   link,
   links,
+  active,
+  setActive,
 }: linksGroupProps) {
   const { classes, theme, cx } = useStyles();
   const hasLinks = Array.isArray(links);
-
   const [opened, setOpened] = useState(initiallyOpened || false);
-  const [active, setActive] = useState<string | null>(null);
 
   const ChevronIcon = theme.dir === 'ltr' ? IconChevronRight : IconChevronLeft;
 
-  const items = (hasLinks ? links : []).map((item) => {
-    const id = useId();
-
-    return (
-      <Link
-        key={id}
-        href={item.link}
-        className={cx(classes.link, { [classes.linkActive]: id === active })}
-        passHref
-        onClick={() => setActive(id)}
-      >
-        <Text>{item.label}</Text>
-      </Link>
-    );
-  });
+  const items = (hasLinks ? links : []).map((item) => (
+    <Link
+      key={item.link}
+      href={item.link}
+      className={cx(classes.link, { [classes.linkActive]: item.link === active })}
+      passHref
+      onClick={() => setActive(item.link)}
+    >
+      <Text>{item.label}</Text>
+    </Link>
+  ));
 
   return (
     <>
