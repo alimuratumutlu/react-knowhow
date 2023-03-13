@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-shadow */
-import { useId, useState } from 'react';
+import { useState } from 'react';
 import { Group, Box, Collapse, ThemeIcon, Text, UnstyledButton } from '@mantine/core';
 import { TablerIcon, IconChevronLeft, IconChevronRight } from '@tabler/icons';
 import Link from 'next/link';
