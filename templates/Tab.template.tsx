@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tabs, Title, createStyles, Stack } from '@mantine/core';
+import { Tabs, Title, createStyles, Stack, useMantineTheme } from '@mantine/core';
 import { PageTitle, Paragraph } from '@components';
 import { IconNotes } from '@tabler/icons-react';
 
@@ -47,9 +47,14 @@ interface tabTemplateProps {
 export default function TabTemplate({ tabList, pageTitle, pageSummary }: tabTemplateProps) {
   const { classes } = useStyles();
   const [activeTab, setActiveTab] = useState<string | null>(tabList[0].value);
+  const theme = useMantineTheme();
 
   return (
-    <>
+    <div
+      style={{
+        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.white,
+      }}
+    >
       <Stack ml="xl">
         <PageTitle>{pageTitle}</PageTitle>
         <Paragraph>{pageSummary}</Paragraph>
@@ -83,6 +88,6 @@ export default function TabTemplate({ tabList, pageTitle, pageSummary }: tabTemp
           </Tabs.Panel>
         ))}
       </Tabs>
-    </>
+    </div>
   );
 }
