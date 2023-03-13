@@ -12,7 +12,7 @@ export default function Logo({ brand }: logoProps) {
   const { classes } = useStyles();
 
   return (
-    <Link href="/" passHref>
+    <Link href="/" passHref className={classes.link}>
       <Stack style={{ width: 300 }}>
         <Text inherit variant="gradient" component="span" className={classes.logo}>
           {brand}
