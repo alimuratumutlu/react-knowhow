@@ -7,12 +7,12 @@ const useStyles = createStyles((theme) => ({
   activeTab: {
     marginBottom: 7,
     marginRight: 7,
-    color: theme.colors.gray[1],
+    color: theme.colorScheme === 'dark' ? theme.colors.gray[7] : theme.colors.gray[1],
     backgroundColor: theme.colors.blue[1],
     border: '2px solid #dee2e6',
     borderRadius: 4,
     '&:hover': {
-      backgroundColor: theme.colors.blue[1],
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.blue[3] : theme.colors.blue[1],
     },
   },
   passiveTab: {
