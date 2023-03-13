@@ -13,7 +13,7 @@ interface linksGroupProps {
   link?: string;
   links?: { label: string; link: string }[];
   active: string | null;
-  setActive: (link: string) => void;
+  handleItemClick: (link: string) => void;
 }
 
 export default function LinksGroup({
@@ -23,7 +23,7 @@ export default function LinksGroup({
   link,
   links,
   active,
-  setActive,
+  handleItemClick,
 }: linksGroupProps) {
   const { classes, theme, cx } = useStyles();
   const hasLinks = Array.isArray(links);
@@ -37,7 +37,8 @@ export default function LinksGroup({
       href={item.link}
       className={cx(classes.link, { [classes.linkActive]: item.link === active })}
       passHref
-      onClick={() => setActive(item.link)}
+      onClick={() => handleItemClick(item.link)}
+      prefetch
     >
       <Text>{item.label}</Text>
     </Link>

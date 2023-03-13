@@ -84,7 +84,7 @@ export default function TabTemplate({ tabList, pageTitle, pageSummary }: tabTemp
             pr="xl"
             className={classes.tabPanel}
           >
-            <Title size="h1" mb="lg">
+            <Title size="h1" mb="lg" color={theme.colors.gray[6]}>
               {tab.label}
             </Title>
             {tab.content}

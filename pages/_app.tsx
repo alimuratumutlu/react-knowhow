@@ -44,7 +44,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
             <AppShell
               padding={0}
               header={<HeaderDefault opened={opened} setOpened={setOpened} />}
-              navbar={<CustomNavbar opened={opened} />}
+              navbar={<CustomNavbar opened={opened} setOpened={setOpened} />}
               styles={() => ({
                 main: {
                   backgroundColor:

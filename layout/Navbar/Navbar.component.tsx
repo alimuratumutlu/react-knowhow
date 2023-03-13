@@ -7,15 +7,21 @@ import useStyles from './Navbar.styles';
 
 interface navbarNestedProps {
   opened: boolean;
+  setOpened: (opened: boolean) => void;
 }
 
-export default function CustomNavbar({ opened }: navbarNestedProps) {
+export default function CustomNavbar({ opened, setOpened }: navbarNestedProps) {
   const [active, setActive] = useState<string | null>(null);
 
   const { classes } = useStyles();
 
+  const handleItemClick = (link: string) => {
+    setOpened(!opened);
+    setActive(link);
+  };
+
   const links = Routes.map((item) => (
-    <LinksGroup {...item} key={item.label} active={active} setActive={setActive} />
+    <LinksGroup {...item} key={item.label} active={active} handleItemClick={handleItemClick} />
   ));
 
   return (
