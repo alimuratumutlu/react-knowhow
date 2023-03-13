@@ -36,8 +36,8 @@ export default function LinksGroup({
       key={item.link}
       href={item.link}
       className={cx(classes.link, { [classes.linkActive]: item.link === active })}
-      passHref
       onClick={() => handleItemClick(item.link)}
+      passHref
       prefetch
     >
       <Text>{item.label}</Text>

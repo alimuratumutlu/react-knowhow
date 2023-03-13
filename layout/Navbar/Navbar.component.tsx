@@ -12,12 +12,13 @@ interface navbarNestedProps {
 
 export default function CustomNavbar({ opened, setOpened }: navbarNestedProps) {
   const [active, setActive] = useState<string | null>(null);
-
   const { classes } = useStyles();
 
   const handleItemClick = (link: string) => {
-    setOpened(!opened);
     setActive(link);
+    setTimeout(() => {
+      setOpened(!opened);
+    }, 500);
   };
 
   const links = Routes.map((item) => (

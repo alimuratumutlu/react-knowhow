@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header, MediaQuery, Burger, useMantineTheme } from '@mantine/core';
-import { Logo } from '@components';
+import { ColorSchemeToggle, Logo } from '@components';
 
 import useStyles from './Header.styles';
 
@@ -32,6 +32,7 @@ export function HeaderDefault({ opened, setOpened }: headerDefaultProps) {
             mr="xl"
           />
           <Logo brand="Murat Umutlu" />
+          <ColorSchemeToggle />
         </div>
       </Header>
     </MediaQuery>

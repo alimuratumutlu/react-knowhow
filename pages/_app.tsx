@@ -8,6 +8,7 @@ import {
   ColorScheme,
   ColorSchemeProvider,
   useMantineTheme,
+  MediaQuery,
 } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
 import CustomNavbar from '@layout/Navbar/Navbar.component';
@@ -39,7 +40,9 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
         <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
           <NotificationsProvider>
-            <ColorSchemeToggle />
+            <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
+              <ColorSchemeToggle />
+            </MediaQuery>
 
             <AppShell
               padding={0}
