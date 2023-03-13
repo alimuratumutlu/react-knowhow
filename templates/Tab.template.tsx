@@ -7,22 +7,20 @@ const useStyles = createStyles((theme) => ({
   activeTab: {
     marginBottom: 7,
     marginRight: 7,
-    color: theme.colorScheme === 'dark' ? theme.colors.gray[7] : theme.colors.gray[1],
-    backgroundColor: theme.colors.blue[1],
+    color: theme.colorScheme === 'dark' ? theme.colors.gray[7] : theme.white,
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.blue[9] : theme.colors.blue[4],
     border: '2px solid #dee2e6',
     borderRadius: 4,
     '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.blue[3] : theme.colors.blue[1],
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.blue[9] : theme.colors.blue[1],
     },
   },
   passiveTab: {
     marginBottom: 7,
     marginRight: 7,
-    backgroundColor: '#fff',
-    borderTop: '1px solid #dee2e6',
-    borderLeft: '1px solid #dee2e6',
-    borderRight: '1px solid #dee2e6',
-    borderBottom: '1px solid #dee2e6',
+    color: theme.colorScheme === 'dark' ? theme.colors.dark[9] : theme.colors.gray[6],
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.gray[6] : theme.colors.gray[1],
+    border: '2px solid #dee2e6',
     borderRadius: 4,
 
     '&:hover': {
@@ -30,7 +28,7 @@ const useStyles = createStyles((theme) => ({
     },
   },
   tabPanel: {
-    borderTop: '1px solid #fff',
+    height: '100%',
   },
 }));
 
@@ -53,13 +51,18 @@ export default function TabTemplate({ tabList, pageTitle, pageSummary }: tabTemp
     <div
       style={{
         backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.white,
+        height: '100%',
       }}
     >
       <Stack ml="xl">
         <PageTitle>{pageTitle}</PageTitle>
         <Paragraph>{pageSummary}</Paragraph>
       </Stack>
-      <Tabs value={activeTab} onTabChange={setActiveTab} style={{ width: '100%', paddingTop: 20 }}>
+      <Tabs
+        value={activeTab}
+        onTabChange={setActiveTab}
+        style={{ width: '100%', height: '100%', paddingTop: 20 }}
+      >
         <Tabs.List style={{ width: '100%', paddingLeft: 20, borderBottom: 0 }}>
           {tabList.map((tab: any) => (
             <Tabs.Tab

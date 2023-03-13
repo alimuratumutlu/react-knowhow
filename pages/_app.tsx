@@ -13,6 +13,8 @@ import { NotificationsProvider } from '@mantine/notifications';
 import CustomNavbar from '@layout/Navbar/Navbar.component';
 import { HeaderDefault } from '@layout/Header/Header.component';
 
+import { ColorSchemeToggle } from '@components';
+
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
   const [colorScheme, setColorScheme] = useState<ColorScheme>(props.colorScheme);
@@ -37,6 +39,8 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
         <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
           <NotificationsProvider>
+            <ColorSchemeToggle />
+
             <AppShell
               padding={0}
               header={<HeaderDefault opened={opened} setOpened={setOpened} />}

@@ -15,7 +15,7 @@ export function HeaderDefault({ opened, setOpened }: headerDefaultProps) {
 
   return (
     <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
-      <Header height={{ base: 50, md: 0 }} p="md" className={classes.HeaderContainer}>
+      <Header height={{ base: 65, md: 0 }} p="md" className={classes.HeaderContainer}>
         <div
           style={{
             display: 'flex',
@@ -28,7 +28,7 @@ export function HeaderDefault({ opened, setOpened }: headerDefaultProps) {
             opened={opened}
             onClick={() => setOpened(!opened)}
             size="sm"
-            color={theme.colors.gray[6]}
+            color={theme.colors.blue[6]}
             mr="xl"
           />
           <Logo brand="Murat Umutlu" />

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MediaQuery, Navbar, ScrollArea } from '@mantine/core';
+import { Group, MediaQuery, Navbar, ScrollArea } from '@mantine/core';
 import { LinksGroup, Logo } from '@components';
 
 import Routes from '@data/Routes';
@@ -21,7 +21,11 @@ export default function CustomNavbar({ opened }: navbarNestedProps) {
   return (
     <Navbar hidden={!opened} width={{ sm: 300 }} p="md" className={classes.navbar}>
       <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
-        <Logo brand="Murat Umutlu" />
+        <Navbar.Section>
+          <Group position="apart">
+            <Logo brand="Murat Umutlu" />
+          </Group>
+        </Navbar.Section>
       </MediaQuery>
       <Navbar.Section grow className={classes.links} component={ScrollArea}>
         <div className={classes.linksInner}>{links}</div>
