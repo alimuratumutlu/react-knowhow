@@ -12,7 +12,6 @@ import {
 import { NotificationsProvider } from '@mantine/notifications';
 import CustomNavbar from '@layout/Navbar/Navbar.component';
 import { HeaderDefault } from '@layout/Header/Header.component';
-import CustomAside from '@layout/Aside/Aside.component';
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
@@ -42,7 +41,6 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
               padding={0}
               header={<HeaderDefault opened={opened} setOpened={setOpened} />}
               navbar={<CustomNavbar opened={opened} />}
-              aside={<CustomAside hiddenBreakpoint="sm" />}
               styles={() => ({
                 main: {
                   backgroundColor:

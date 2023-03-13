@@ -24,7 +24,7 @@
       "@hooks/*": ["./hooks/*"],
       "@layout/*": ["./layout/*"],
       "@pages/*": ["./pages/*"],
-      "@sections": ["./sections"],
+      "@views": ["./views"],
       "@templates/*": ["./templates/*"],
       "@public/*": ["./public/*"],
   },

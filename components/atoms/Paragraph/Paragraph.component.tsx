@@ -2,7 +2,7 @@ import React from 'react';
 import { Text } from '@mantine/core';
 
 interface paragraphProps {
-  children: React.ReactNode | React.ReactNode[] | string;
+  children?: React.ReactNode | React.ReactNode[] | string;
 }
 
 export default function Paragraph({ children }: paragraphProps) {

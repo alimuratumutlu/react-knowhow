@@ -15,36 +15,16 @@ const pageList = [
     link: '/murat-umutlu',
   },
   {
-    name: 'Algorithms',
-    link: '/algorithms',
+    name: 'Github',
+    link: '/projects',
   },
   {
-    name: 'Architecture',
-    link: '/architecture',
-  },
-  {
-    name: 'Authentication',
-    link: '/authentication',
-  },
-  {
-    name: 'Blockchain',
-    link: '/blockchain',
-  },
-  {
-    name: 'CI / CD',
-    link: '/ci-cd',
-  },
-  {
-    name: 'Cloud',
-    link: '/cloud',
+    name: 'Linkedin',
+    link: '/experience',
   },
   {
     name: 'Databases',
     link: '/databases',
-  },
-  {
-    name: 'Front End',
-    link: '/front-end',
   },
 ];
 
@@ -70,8 +50,8 @@ export function HeaderDefault({ opened, setOpened }: headerDefaultProps) {
             color={theme.colors.gray[6]}
             mr="xl"
           />
-        </MediaQuery>{' '}
-        <Logo brand="Muum Development" />
+        </MediaQuery>
+        <Logo brand="Murat Umutlu" />
         <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
           <Center>
             {pageList.map((page) => (

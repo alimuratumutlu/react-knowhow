@@ -4,10 +4,10 @@ import { Title } from '@mantine/core';
 import useStyles from './PageTitle.styles';
 
 interface pageTitleProps {
-  text: string;
+  children: React.ReactNode;
 }
 
-export default function PageTitle({ text }: pageTitleProps) {
+export default function PageTitle({ children }: pageTitleProps) {
   const { classes } = useStyles();
 
   return (
@@ -18,10 +18,9 @@ export default function PageTitle({ text }: pageTitleProps) {
       weight={900}
       align="left"
       className={classes.title}
-      pl="sm"
       pr="sm"
     >
-      {text}
+      {children}
     </Title>
   );
 }

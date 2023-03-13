@@ -1,5 +1,6 @@
 // ATOMS
 export { default as CustomButton } from './atoms/Button/Button.component';
+export { default as CodeBlock } from './atoms/CodeBlock/CodeBlock.component';
 export { default as Logo } from './atoms/Logo/Logo.component';
 export { default as PageTitle } from './atoms/PageTitle/PageTitle.component';
 export { default as Paragraph } from './atoms/Paragraph/Paragraph.component';

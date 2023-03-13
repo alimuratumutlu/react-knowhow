@@ -29,8 +29,8 @@ export default function JobDetailCard({
 }: jobDetailCardProps) {
   const { classes } = useStyles();
   return (
-    <Card withBorder radius="md" p={0} className={classes.card} ml="sm" shadow="sm">
-      <Group noWrap spacing={0}>
+    <Card withBorder radius="md" p={0} className={classes.card} shadow="sm">
+      <Grid>
         <div className={classes.body}>
           <Grid.Col xs={12} xl={12}>
             <Group>
@@ -81,7 +81,7 @@ export default function JobDetailCard({
             </Text>
           </Grid.Col>
         </div>
-      </Group>
+      </Grid>
     </Card>
   );
 }

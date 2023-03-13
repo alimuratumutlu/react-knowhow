@@ -12,7 +12,7 @@ export default function PostTemplate({ title, children }: postTemplateProps) {
       <Grid>
         {title && (
           <Grid.Col xs={12}>
-            <PageTitle text={title} />
+            <PageTitle>{title}</PageTitle>
           </Grid.Col>
         )}
         <Grid.Col xs={12}>{children}</Grid.Col>

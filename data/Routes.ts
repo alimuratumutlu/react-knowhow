@@ -1,11 +1,4 @@
-import {
-  IconNotes,
-  IconGauge,
-  IconPresentationAnalytics,
-  IconAdjustments,
-  IconLock,
-  IconLink,
-} from '@tabler/icons';
+import { IconNotes, IconPresentationAnalytics, IconLock, IconLink } from '@tabler/icons';
 
 export const userLinks = [
   {
@@ -47,18 +40,29 @@ export const mainLinks = [
 
 const Routes = [
   {
-    label: 'Murat Umutlu',
-    icon: IconGauge,
-    initiallyOpened: true,
+    label: 'Algorithms & Data Structures',
+    icon: IconNotes,
+    color: 'red',
     links: [
-      { label: 'CV Resume', link: '/' },
-      { label: 'Open Source Projects', link: '/cv-resume/open-source-projects' },
-      { label: 'Industrial Experience', link: '/cv-resume/industrial-experience' },
+      {
+        label: 'Algorithms',
+        link: '/algorithms',
+      },
+      {
+        label: 'Data Structures',
+        link: '/data-structures',
+      },
     ],
   },
   {
-    label: 'Algorithms',
+    label: 'Architecture',
     icon: IconNotes,
+    links: [
+      { label: 'Software Architecture', link: '/software-architecture' },
+      { label: 'Software Patterns', link: '/software-patterns' },
+      { label: 'Development Methodologies', link: '/development-methodologies' },
+      { label: 'Development Principles', link: '/development-principles' },
+    ],
   },
   {
     label: 'Authenticaton',
@@ -125,17 +129,6 @@ const Routes = [
     ],
   },
   {
-    label: 'Project Management',
-    icon: IconPresentationAnalytics,
-    links: [
-      { label: 'Project Planning', link: '/' },
-      { label: 'Team Management', link: '/' },
-      { label: 'Quality Management', link: '/' },
-      { label: 'Agile Methodology', link: '/' },
-      { label: 'Project Closure', link: '/' },
-    ],
-  },
-  {
     label: 'React Best Practices',
     icon: IconPresentationAnalytics,
     links: [
@@ -148,7 +141,7 @@ const Routes = [
     ],
   },
   {
-    label: 'React Challenges',
+    label: 'Open Source Projects',
     icon: IconLock,
     links: [
       {
@@ -239,96 +232,6 @@ const Routes = [
       { label: 'useWebSocket', link: '/react-custom-hooks/useWebSocket' },
       { label: 'useWindowFocus', link: '/react-custom-hooks/useWindowFocus' },
       { label: 'useWindowSize', link: '/react-custom-hooks/useWindowSize' },
-    ],
-  },
-  {
-    label: 'Development Methodologies',
-    icon: IconPresentationAnalytics,
-    links: [
-      { label: 'Waterfall Model', link: '/development-methodologies/waterfall-model' },
-      { label: 'Agile Development', link: '/development-methodologies/agile-development' },
-      { label: 'Scrum', link: '/development-methodologies/scrum' },
-      { label: 'Extreme Programming (XP)', link: '/development-methodologies/extreme-programming' },
-      { label: 'Kanban', link: '/development-methodologies/kanban' },
-      {
-        label: 'Feature Driven Development (FDD)',
-        link: '/development-methodologies/feature-driven-development',
-      },
-      { label: 'Crystal Clear', link: '/development-methodologies/crystal-clear' },
-      { label: 'Lean Development', link: '/development-methodologies/lean-development' },
-      {
-        label: 'Dynamic Systems Development Method (DSDM)',
-        link: '/development-methodologies/dynamic-systems-development-method',
-      },
-      {
-        label: 'Rapid Application Development (RAD)',
-        link: '/development-methodologies/rapid-application-development',
-      },
-      { label: 'Spiral Model', link: '/development-methodologies/spiral-model' },
-      {
-        label: 'Test Driven Development (TDD)',
-        link: '/development-methodologies/test-driven-development',
-      },
-      {
-        label: 'Behavior Driven Development (BDD)',
-        link: '/development-methodologies/behavior-driven-development',
-      },
-      {
-        label: 'Acceptance Test Driven Development (ATDD)',
-        link: '/development-methodologies/acceptance-test-driven-development',
-      },
-      {
-        label: 'Domain Driven Design (DDD)',
-        link: '/development-methodologies/domain-driven-design',
-      },
-      {
-        label: 'Continuous Integration/Continuous Delivery (CI/CD)',
-        link: '/development-methodologies/continuous-integration-continuous-delivery',
-      },
-    ],
-  },
-  {
-    label: 'Software Architecture',
-    icon: IconAdjustments,
-    links: [
-      { label: 'Architecture Decisions', link: '/software-architecture/architecture-decisions' },
-      { label: 'Design Patterns', link: '/software-architecture/design-patterns' },
-      { label: 'Cloud Architecture', link: '/software-architecture/cloud-architecture' },
-      {
-        label: 'Performance Architecture',
-        link: '/software-architecture/performance-architecture',
-      },
-      { label: 'Security Architecture', link: '/software-architecture/security-architecture' },
-      {
-        label: 'Component-Based Architecture',
-        link: '/software-architecture/component-based-architecture',
-      },
-      {
-        label: 'Event-Driven Architecture',
-        link: '/software-architecture/event-driven-architecture',
-      },
-      { label: 'Layered Architecture', link: '/software-architecture/layered-architecture' },
-      {
-        label: 'Microkernel Architecture',
-        link: '/software-architecture/microkernel-architecture',
-      },
-      {
-        label: 'Microservices Architecture',
-        link: '/software-architecture/microservices-architecture',
-      },
-      {
-        label: 'Orchestration-Driven Architecture',
-        link: '/software-architecture/orchestration-driven-architecture',
-      },
-      { label: 'Pipeline Architecture', link: '/software-architecture/pipeline-architecture' },
-      {
-        label: 'Service-Based Architecture',
-        link: '/software-architecture/service-based-architecture',
-      },
-      {
-        label: 'Space-Based Architecture',
-        link: '/software-architecture/space-based-architecture',
-      },
     ],
   },
 ];

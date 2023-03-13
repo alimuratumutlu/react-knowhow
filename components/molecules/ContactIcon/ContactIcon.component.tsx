@@ -20,7 +20,7 @@ export default function ContactIcon({
   className,
   ...others
 }: ContactIconProps) {
-  const { classes, cx } = useStyles({ variant });
+  const { classes, cx } = useStyles();
   return (
     <div className={cx(classes.wrapper, className)} {...others}>
       {variant === 'gradient' ? (
