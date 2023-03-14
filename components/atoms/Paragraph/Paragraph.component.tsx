@@ -2,10 +2,11 @@ import React from 'react';
 import { Text, useMantineTheme } from '@mantine/core';
 
 interface paragraphProps {
+  strong?: boolean;
   children?: React.ReactNode | React.ReactNode[] | string;
 }
 
-export default function Paragraph({ children }: paragraphProps) {
+export default function Paragraph({ strong, children }: paragraphProps) {
   const theme = useMantineTheme();
 
   return (
@@ -15,6 +16,7 @@ export default function Paragraph({ children }: paragraphProps) {
       size="lg"
       mb="md"
       pr="sm"
+      weight={strong ? 600 : 400}
     >
       {children}
     </Text>

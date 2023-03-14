@@ -24,10 +24,8 @@ const FirebaseAuthentication = (
       To integrate a React app with Firebase Authentication API, you&apos;ll need to follow these
       steps:
     </Paragraph>
-    <Paragraph>
-      <strong>
-        1. Create a Firebase project and enable Firebase Authentication in the Firebase console.
-      </strong>
+    <Paragraph strong>
+      1. Create a Firebase project and enable Firebase Authentication in the Firebase console.
     </Paragraph>
     <Paragraph>
       <ListItem itemLabel="1.1 " itemDescription="Sign in to the Firebase console." />
@@ -52,19 +50,15 @@ const FirebaseAuthentication = (
         itemDescription="Once you've enabled the sign-in methods that you want to use, you can customize the authentication settings for your app. For example, you can configure password policies, email templates, and multi-factor authentication."
       />
     </Paragraph>
-    <Paragraph>
-      <strong>
-        2. Install the Firebase SDK for JavaScript and the Firebase Authentication SDK in your React
-        app using a package manager like npm or yarn.
-      </strong>
+    <Paragraph strong>
+      2. Install the Firebase SDK for JavaScript and the Firebase Authentication SDK in your React
+      app using a package manager like npm or yarn.
     </Paragraph>
     <CodeBlock>npm install firebase</CodeBlock>
     <CodeBlock>npm install firebase/auth</CodeBlock>
-    <Paragraph>
-      <strong>
-        3. Initialize the Firebase SDK in your app by creating a Firebase configuration object and
-        passing it to the initializeApp function.
-      </strong>
+    <Paragraph strong>
+      3. Initialize the Firebase SDK in your app by creating a Firebase configuration object and
+      passing it to the initializeApp function.
     </Paragraph>
     <CodeBlock>
       {`import firebase from 'firebase/app';
@@ -81,12 +75,10 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);`}
     </CodeBlock>
-    <Paragraph>
-      <strong>
-        4. Use the Firebase Authentication APIs to handle authentication in your React components.
-        For example, you can use the signInWithPopup method to open a pop-up window for the user to
-        sign in with their Google account.
-      </strong>
+    <Paragraph strong>
+      4. Use the Firebase Authentication APIs to handle authentication in your React components. For
+      example, you can use the signInWithPopup method to open a pop-up window for the user to sign
+      in with their Google account.
     </Paragraph>
     <CodeBlock>
       {`import { useState } from 'react';
