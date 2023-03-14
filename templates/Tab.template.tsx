@@ -7,7 +7,7 @@ const useStyles = createStyles((theme) => ({
   activeTab: {
     marginBottom: 7,
     marginRight: 7,
-    color: theme.colorScheme === 'dark' ? theme.colors.gray[7] : theme.white,
+    color: theme.colorScheme === 'dark' ? theme.colors.gray[7] : theme.colors.gray[9],
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.blue[9] : theme.colors.blue[4],
     border: '2px solid #dee2e6',
     borderRadius: 4,
@@ -38,11 +38,17 @@ interface tabTemplateProps {
     label: string;
     content: JSX.Element;
   }[];
-  pageTitle: string;
+  pageTitle?: string;
   pageSummary: string;
+  noTabTitle?: boolean;
 }
 
-export default function TabTemplate({ tabList, pageTitle, pageSummary }: tabTemplateProps) {
+export default function TabTemplate({
+  tabList,
+  pageTitle,
+  pageSummary,
+  noTabTitle,
+}: tabTemplateProps) {
   const { classes } = useStyles();
   const [activeTab, setActiveTab] = useState<string | null>(tabList[0].value);
   const theme = useMantineTheme();
@@ -84,9 +90,12 @@ export default function TabTemplate({ tabList, pageTitle, pageSummary }: tabTemp
             pr="xl"
             className={classes.tabPanel}
           >
-            <Title size="h1" mb="lg" color={theme.colors.gray[6]}>
-              {tab.label}
-            </Title>
+            {!noTabTitle && (
+              <Title size="h1" mb="lg" color={theme.colors.gray[6]}>
+                {tab.label}
+              </Title>
+            )}
+
             {tab.content}
           </Tabs.Panel>
         ))}
