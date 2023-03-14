@@ -14,7 +14,7 @@ export function HeaderDefault({ opened, setOpened }: headerDefaultProps) {
   const { classes } = useStyles();
 
   return (
-    <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
+    <MediaQuery largerThan="md" styles={{ display: 'none' }}>
       <Header height={{ base: 65, md: 0 }} p="md" className={classes.HeaderContainer}>
         <div
           style={{
