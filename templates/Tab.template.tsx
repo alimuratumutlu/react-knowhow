@@ -69,7 +69,7 @@ export default function TabTemplate({
         onTabChange={setActiveTab}
         style={{ width: '100%', height: '100%', paddingTop: 20 }}
       >
-        <Tabs.List style={{ width: '100%', paddingLeft: 20, borderBottom: 0 }}>
+        <Tabs.List style={{ paddingLeft: 20, borderBottom: 0 }}>
           {tabList.map((tab: any) => (
             <Tabs.Tab
               key={tab.value}

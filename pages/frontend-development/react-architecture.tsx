@@ -7,7 +7,7 @@ export default function ReactArchitecture() {
   return (
     <TabTemplate
       tabList={GeneralContent}
-      pageTitle="React Architecture"
+      pageTitle="React Component Architecture"
       pageSummary="React Component Architecture is a way of structuring your React components. It is a way of organizing your components in a way that makes them easy to maintain and reuse."
     />
   );

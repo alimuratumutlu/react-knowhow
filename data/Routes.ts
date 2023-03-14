@@ -51,8 +51,10 @@ const Routes = [
       { label: 'React Cookies & Tokens', link: '/frontend-development/react-cookies-tokens' },
       { label: 'React Custom Hooks', link: '/frontend-development/react-custom-hooks' },
       { label: 'React Error Handling', link: '/frontend-development/react-error-handling' },
+      { label: 'React GraphQL', link: '/frontend-development/react-graphql' },
+      { label: 'React Nextjs', link: '/frontend-development/react-nextjs' },
       {
-        label: 'React Performance Opt.',
+        label: 'React Performance Optimization',
         link: '/frontend-development/react-performance',
       },
       { label: 'React State Management', link: '/frontend-development/react-state-management' },
