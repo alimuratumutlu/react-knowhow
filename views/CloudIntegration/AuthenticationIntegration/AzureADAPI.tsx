@@ -18,23 +18,23 @@ const AzureActiveDirectory = (
     <SectionTitle>Key Azure AD API Categories and Services</SectionTitle>
 
     <ListItem
-      itemLabel="Authentication and Authorization"
+      itemLabel="Authentication and Authorization: "
       itemDescription="
-      Authentication and Authorization: Azure AD offers a range of authentication and authorization
+      Azure AD offers a range of authentication and authorization
       capabilities, including multi-factor authentication, conditional access, and identity
       protection. The Azure AD Authentication Library (ADAL) and Microsoft Authentication Library
       (MSAL) are two key APIs for integrating Azure AD authentication into applications."
     />
 
     <ListItem
-      itemLabel="User and Group Management"
+      itemLabel="User and Group Management: "
       itemDescription="The Azure AD Graph API allows developers to manage users, groups,
       and other directory objects in Azure AD, such as creating, deleting, updating, and querying
       users and groups."
     />
 
     <ListItem
-      itemLabel="Application Management"
+      itemLabel="Application Management: "
       itemDescription="The Azure AD Application Proxy allows developers to securely publish
       on-premises web applications for external access, while the Azure AD App Registration API
       enables developers to manage their application registrations in Azure AD."

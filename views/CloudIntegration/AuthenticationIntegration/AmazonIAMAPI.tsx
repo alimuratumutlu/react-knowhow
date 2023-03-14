@@ -13,27 +13,27 @@ const AmazonIAMAPI = (
     <SectionTitle>Features</SectionTitle>
 
     <ListItem
-      itemLabel="User and group management"
+      itemLabel="User and group management: "
       itemDescription="IAM allows you to create and manage IAM users and groups, and to assign permissions to these entities using IAM policies."
     />
 
     <ListItem
-      itemLabel="Role management"
+      itemLabel="Role management: "
       itemDescription="IAM allows you to create and manage IAM roles, which define a set of permissions that can be assumed by trusted entities, such as AWS services or IAM users."
     />
 
     <ListItem
-      itemLabel="Permission management"
+      itemLabel="Permission management: "
       itemDescription="IAM allows you to create and manage IAM policies, which define the permissions that are granted or denied to IAM users, groups, and roles."
     />
 
     <ListItem
-      itemLabel="Multifactor authentication (MFA)"
+      itemLabel="Multifactor authentication (MFA): "
       itemDescription="IAM supports MFA, which provides an additional layer of security to verify the identity of IAM users."
     />
 
     <ListItem
-      itemLabel="Integration with AWS services"
+      itemLabel="Integration with AWS services: "
       itemDescription="IAM integrates with many AWS services, such as Amazon S3, Amazon EC2, and AWS Lambda, to provide granular access control to these services."
     />
 
