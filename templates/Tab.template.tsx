@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Tabs, Title, createStyles, Stack, useMantineTheme } from '@mantine/core';
 import { PageTitle, Paragraph } from '@components';
 import { IconNotes } from '@tabler/icons-react';
@@ -6,6 +6,14 @@ import { IconNotes } from '@tabler/icons-react';
 import useIsLandscape from '@hooks/useIsLandscape';
 
 const useStyles = createStyles((theme) => ({
+  tabsWrapper: {
+    width: '100%',
+    paddingTop: 20,
+    paddingBottom: 20,
+    '@media (orientation: portrait)': {
+      flexDirection: 'column-reverse',
+    },
+  },
   activeTab: {
     marginBottom: 7,
     marginRight: 7,
@@ -31,6 +39,10 @@ const useStyles = createStyles((theme) => ({
   },
   tabPanel: {
     height: '100%',
+
+    '@media (orientation: landscape)': {
+      paddingRight: 0,
+    },
   },
 }));
 
@@ -56,10 +68,6 @@ export default function TabTemplate({
   const theme = useMantineTheme();
   const isLandscape: boolean = useIsLandscape();
 
-  useEffect(() => {
-    console.log(isLandscape, 'isLandscape');
-  }, [isLandscape]);
-
   return (
     <div
       style={{
@@ -74,9 +82,31 @@ export default function TabTemplate({
       <Tabs
         value={activeTab}
         onTabChange={setActiveTab}
-        style={{ width: '100%', height: '100%', paddingTop: 20 }}
+        className={classes.tabsWrapper}
         orientation={isLandscape ? 'horizontal' : 'vertical'}
       >
+        {tabList.map((tab: any) => (
+          <Tabs.Panel
+            key={tab.value}
+            value={tab.value}
+            pl="xl"
+            pr="xl"
+            className={classes.tabPanel}
+          >
+            {!noTabTitle && (
+              <Title
+                size="h1"
+                mb="lg"
+                color={theme.colors.gray[6]}
+                style={{ borderTop: '2px solid #dcdcdc', paddingTop: 20 }}
+              >
+                {tab.label}
+              </Title>
+            )}
+
+            {tab.content}
+          </Tabs.Panel>
+        ))}
         <Tabs.List style={{ paddingLeft: 20, borderBottom: 0 }}>
           {tabList.map((tab: any) => (
             <Tabs.Tab
@@ -89,23 +119,6 @@ export default function TabTemplate({
             </Tabs.Tab>
           ))}
         </Tabs.List>
-        {tabList.map((tab: any) => (
-          <Tabs.Panel
-            key={tab.value}
-            value={tab.value}
-            pl="xl"
-            pr="xl"
-            className={classes.tabPanel}
-          >
-            {!noTabTitle && (
-              <Title size="h1" mb="lg" color={theme.colors.gray[6]}>
-                {tab.label}
-              </Title>
-            )}
-
-            {tab.content}
-          </Tabs.Panel>
-        ))}
       </Tabs>
     </div>
   );
