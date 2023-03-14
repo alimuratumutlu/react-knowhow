@@ -22,7 +22,13 @@ export default function CustomNavbar({ opened, setOpened }: navbarNestedProps) {
   };
 
   const links = Routes.map((item) => (
-    <LinksGroup {...item} key={item.label} active={active} handleItemClick={handleItemClick} />
+    <LinksGroup
+      initiallyOpened
+      {...item}
+      key={item.label}
+      active={active}
+      handleItemClick={handleItemClick}
+    />
   ));
 
   return (

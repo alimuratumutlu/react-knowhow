@@ -82,6 +82,59 @@ import {
   Resume,
   OpenSourceProjects,
   WillBeAvailableSoon,
+  AutomatedTesting,
+  CICDTools,
+  ContinuousIntegration,
+  ContinuousDelivery,
+  ContinuousDeployment,
+  ContinuousMonitoring,
+  ContinuousImprovement,
+  ContinuousLearning,
+  ContinuousFeedback,
+  ContinuousExperimentation,
+  ContinuousOptimization,
+  ContinuousInspection,
+  AmazonCognitoAPI,
+  AmazonIAMAPI,
+  AzureADAPI,
+  FacebookOAuthAPI,
+  FirebaseAuthenticationAPI,
+  GitHubOAuthAPI,
+  GoogleCloudIdentityAPI,
+  GoogleOAuthAPI,
+  IBMCloudAppIDAPI,
+  LinkedInOAuthAPI,
+  TwitterOAuthAPI,
+  AmazonDynamoDBAPI,
+  AmazonRDSAPI,
+  AzureCosmosDBAPI,
+  FirebaseRealtimeDatabaseAPI,
+  GoogleCloudBigQueryAPI,
+  GoogleCloudDatastoreAPI,
+  GoogleCloudFirestoreAPI,
+  GoogleCloudMemorystoreAPI,
+  GoogleCloudSpannerAPI,
+  GoogleCloudSQLAPI,
+  IBMCloudantAPI,
+  AmazonAPIGatewayAPI,
+  AWSLambdaAPI,
+  AzureFunctionsAPI,
+  FirebaseCloudFunctionsAPI,
+  GoogleCloudFunctionsAPI,
+  IBMCloudFunctionsAPI,
+  AmazonSNSAPI,
+  AzureEventGridAPI,
+  FirebaseCloudMessagingAPI,
+  GoogleCloudPubSubAPI,
+  TwillioAPI,
+  AmazonPayAPI,
+  GooglePayAPI,
+  StripeAPI,
+  AmazonS3API,
+  AzureBlobStorageAPI,
+  FirebaseCloudStorageAPI,
+  GoogleCloudStorageAPI,
+  IBMCloudObjectStorageAPI,
 } from '@views';
 
 export const AlgorithmsContent = [
@@ -521,5 +574,291 @@ export const GeneralContent = [
     value: 'willbeavailablesoon',
     label: 'Will Be AvailableSoon',
     content: WillBeAvailableSoon,
+  },
+];
+
+export const CICDContent = [
+  {
+    value: 'automatedtesting',
+    label: 'Automated Testing',
+    content: AutomatedTesting,
+  },
+  {
+    value: 'cicdtools',
+    label: 'CI/CD Tools',
+    content: CICDTools,
+  },
+  {
+    value: 'continuousintegration',
+    label: 'Continuous Integration',
+    content: ContinuousIntegration,
+  },
+  {
+    value: 'continuousdelivery',
+    label: 'Continuous Delivery',
+    content: ContinuousDelivery,
+  },
+  {
+    value: 'continuousdeployment',
+    label: 'Continuous Deployment',
+    content: ContinuousDeployment,
+  },
+  {
+    value: 'continuousmonitoring',
+    label: 'Continuous Monitoring',
+    content: ContinuousMonitoring,
+  },
+  {
+    value: 'continuousfeedback',
+    label: 'Continuous Feedback',
+    content: ContinuousFeedback,
+  },
+  {
+    value: 'continuouslearning',
+    label: 'Continuous Learning',
+    content: ContinuousLearning,
+  },
+  {
+    value: 'continuousimprovement',
+    label: 'Continuous Improvement',
+    content: ContinuousImprovement,
+  },
+  {
+    value: 'continuousexperimentation',
+    label: 'Continuous Experimentation',
+    content: ContinuousExperimentation,
+  },
+  {
+    value: 'continuousoptimization',
+    label: 'Continuous Optimization',
+    content: ContinuousOptimization,
+  },
+  {
+    value: 'continuousinspection',
+    label: 'Continuous Inspection',
+    content: ContinuousInspection,
+  },
+];
+
+export const AuthenticationIntegrationContent = [
+  {
+    value: 'amazoncognitoapi',
+    label: 'Amazon Cognito API',
+    content: AmazonCognitoAPI,
+  },
+  {
+    value: 'amazoniamapi',
+    label: 'Amazon IAM API',
+    content: AmazonIAMAPI,
+  },
+  {
+    value: 'azureadapi',
+    label: 'Azure AD API',
+    content: AzureADAPI,
+  },
+  {
+    value: 'facebookoauthapi',
+    label: 'Facebook OAuth API',
+    content: FacebookOAuthAPI,
+  },
+  {
+    value: 'firebaseauthenticationapi',
+    label: 'Firebase Authentication API',
+    content: FirebaseAuthenticationAPI,
+  },
+  {
+    value: 'githuboauthapi',
+    label: 'GitHub OAuth API',
+    content: GitHubOAuthAPI,
+  },
+  {
+    value: 'googlecloudidentityapi',
+    label: 'Google Cloud Identity API',
+    content: GoogleCloudIdentityAPI,
+  },
+  {
+    value: 'googleoauthapi',
+    label: 'Google OAuth API',
+    content: GoogleOAuthAPI,
+  },
+  {
+    value: 'ibmcloudappidapi',
+    label: 'IBM Cloud APP ID Api',
+    content: IBMCloudAppIDAPI,
+  },
+  {
+    value: 'linkedinoauthapi',
+    label: 'LinkedIn OAuth API',
+    content: LinkedInOAuthAPI,
+  },
+  {
+    value: 'twitteroauthapi',
+    label: 'Twitter OAuth API',
+    content: TwitterOAuthAPI,
+  },
+];
+
+export const DatabaseIntegrationContent = [
+  {
+    value: 'amazondynamodbapi',
+    label: 'Amazon DynamoDB API',
+    content: AmazonDynamoDBAPI,
+  },
+  {
+    value: 'amazonrdsapi',
+    label: 'Amazon RDS API',
+    content: AmazonRDSAPI,
+  },
+  {
+    value: 'azurecosmosdbapi',
+    label: 'Azure CosmosDB API',
+    content: AzureCosmosDBAPI,
+  },
+  {
+    value: 'firebaserealtimedatabaseapi',
+    label: 'Firebase Realtime Database API',
+    content: FirebaseRealtimeDatabaseAPI,
+  },
+  {
+    value: 'googlecloudbigqueryapi',
+    label: 'Google Cloud BigQuery API',
+    content: GoogleCloudBigQueryAPI,
+  },
+  {
+    value: 'googleclouddatastoreapi',
+    label: 'Google Cloud Datastore API',
+    content: GoogleCloudDatastoreAPI,
+  },
+  {
+    value: 'googlecloudfirestoreapi',
+    label: 'Google Cloud Firestore API',
+    content: GoogleCloudFirestoreAPI,
+  },
+  {
+    value: 'googlecloudmemorystoreapi',
+    label: 'Google Cloud Memorystore API',
+    content: GoogleCloudMemorystoreAPI,
+  },
+  {
+    value: 'googlecloudspannerapi',
+    label: 'Google Cloud Spanner API',
+    content: GoogleCloudSpannerAPI,
+  },
+  {
+    value: 'googlecloudsqlapi',
+    label: 'Google Cloud SQL API',
+    content: GoogleCloudSQLAPI,
+  },
+  {
+    value: 'ibmcloudantapi',
+    label: 'IBM Cloudant API',
+    content: IBMCloudantAPI,
+  },
+];
+
+export const FunctionIntegrationContent = [
+  {
+    value: 'amazonapigatewayapi',
+    label: 'Amazon API Gateway API',
+    content: AmazonAPIGatewayAPI,
+  },
+  {
+    value: 'awslambdaapi',
+    label: 'AWS Lambda API',
+    content: AWSLambdaAPI,
+  },
+  {
+    value: 'azurefunctionsapi',
+    label: 'Azure Functions API',
+    content: AzureFunctionsAPI,
+  },
+  {
+    value: 'firebasecloudfunctionsapi',
+    label: 'Firebase Cloud Functions API',
+    content: FirebaseCloudFunctionsAPI,
+  },
+  {
+    value: 'googlecloudfunctionsapi',
+    label: 'Google Cloud Functions API',
+    content: GoogleCloudFunctionsAPI,
+  },
+  {
+    value: 'ibmcloudfunctionsapi',
+    label: 'IBM Cloud Functions API',
+    content: IBMCloudFunctionsAPI,
+  },
+];
+
+export const MessagingIntegrationContent = [
+  {
+    value: 'amazamazonsnsapi',
+    label: 'Amazon SNS API',
+    content: AmazonSNSAPI,
+  },
+  {
+    value: 'azureeventgridapi',
+    label: 'Azure Event Grid API',
+    content: AzureEventGridAPI,
+  },
+  {
+    value: 'firebasecloudmessagingapi',
+    label: 'Firebase Cloud Messaging API',
+    content: FirebaseCloudMessagingAPI,
+  },
+  {
+    value: 'googlecloudpubsubapi',
+    label: 'Google Cloud Pub/Sub API',
+    content: GoogleCloudPubSubAPI,
+  },
+  {
+    value: 'twillioapi',
+    label: 'Twillio API',
+    content: TwillioAPI,
+  },
+];
+
+export const PaymentIntegrationContent = [
+  {
+    value: 'amazonpayapi',
+    label: 'Amazon Pay API',
+    content: AmazonPayAPI,
+  },
+  {
+    value: 'googlepayapi',
+    label: 'Google Pay API',
+    content: GooglePayAPI,
+  },
+  {
+    value: 'stripeapi',
+    label: 'Stripe API',
+    content: StripeAPI,
+  },
+];
+
+export const StorageIntegrationContent = [
+  {
+    value: 'amazons3api',
+    label: 'Amazon S3 API',
+    content: AmazonS3API,
+  },
+  {
+    value: 'azureblobstorageapi',
+    label: 'Azure Blob Storage API',
+    content: AzureBlobStorageAPI,
+  },
+  {
+    value: 'firebasecloudstorageapi',
+    label: 'Firebase Cloud Storage API',
+    content: FirebaseCloudStorageAPI,
+  },
+  {
+    value: 'googlecloudstorageapi',
+    label: 'Google Cloud Storage API',
+    content: GoogleCloudStorageAPI,
+  },
+  {
+    value: 'ibmcloudobjectstorageapi',
+    label: 'IBM Cloud Object Storage API',
+    content: IBMCloudObjectStorageAPI,
   },
 ];
