@@ -4,7 +4,7 @@ function useIsLandscape(): boolean {
   const [isLandscape, setIsLandscape] = useState<boolean>(false);
 
   const handleOrientationChange = (): void => {
-    if (window.orientation === 90 || window.orientation === -90) {
+    if (window.innerHeight < window.innerWidth) {
       setIsLandscape(true);
     } else {
       setIsLandscape(false);

@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Tabs, Title, createStyles, Stack, useMantineTheme } from '@mantine/core';
 import { PageTitle, Paragraph } from '@components';
 import { IconNotes } from '@tabler/icons-react';
+
+import useIsLandscape from '@hooks/useIsLandscape';
 
 const useStyles = createStyles((theme) => ({
   activeTab: {
@@ -52,6 +54,11 @@ export default function TabTemplate({
   const { classes } = useStyles();
   const [activeTab, setActiveTab] = useState<string | null>(tabList[0].value);
   const theme = useMantineTheme();
+  const isLandscape: boolean = useIsLandscape();
+
+  useEffect(() => {
+    console.log(isLandscape, 'isLandscape');
+  }, [isLandscape]);
 
   return (
     <div
@@ -68,6 +75,7 @@ export default function TabTemplate({
         value={activeTab}
         onTabChange={setActiveTab}
         style={{ width: '100%', height: '100%', paddingTop: 20 }}
+        orientation={isLandscape ? 'horizontal' : 'vertical'}
       >
         <Tabs.List style={{ paddingLeft: 20, borderBottom: 0 }}>
           {tabList.map((tab: any) => (
@@ -85,7 +93,6 @@ export default function TabTemplate({
           <Tabs.Panel
             key={tab.value}
             value={tab.value}
-            pt="xl"
             pl="xl"
             pr="xl"
             className={classes.tabPanel}
